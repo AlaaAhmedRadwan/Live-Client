@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout">
+
+    <data>
+
+        <variable
+            name="data"
+            type="com.codesroots.live.models.current_orders.OrderDetail" />
+
+        <variable
+            name="Context"
+            type="com.codesroots.live.presentation.map_activity.MapActivity" />
+
+        <variable
+            name="listener"
+            type="com.codesroots.live.helper.ClickHandler" />
+
+
+        <import type="android.text.Html" />
+
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/shadow_back_g">
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidlinehorizental5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="160dp" />
+
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/item_img"
+            android:layout_width="@dimen/_80sdp"
+            android:layout_height="@dimen/_80sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:src="@drawable/test"
+            tools:src="@tools:sample/avatars"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:riv_corner_radius="@dimen/_10sdp" />
+
+
+        <!--            android:text="@{String.valueOf((data.total != null) ? data.total : data.price)}"-->
+
+
+        <TextView
+            android:id="@+id/item_price"
+            style="@style/TabLayoutTextStyle"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginRight="@dimen/_8sdp"
+            android:layout_marginBottom="@dimen/_8sdp"
+            android:gravity="center"
+            android:text="@{data.menu_categories_items.price + ` ` + `ج.م`}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/quantity"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/item_img"
+            tools:text="@string/price" />
+
+        <TextView
+            android:id="@+id/quantity"
+
+            style="@style/TabLayoutTextStyle"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginLeft="@dimen/_8sdp"
+            android:layout_marginBottom="@dimen/_8sdp"
+            android:gravity="center"
+            android:text="@{` ` + `الكمية المطلوبة`  +` ` + data.amount  }"
+            android:textColor="@color/red2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/item_price"
+            app:layout_constraintTop_toTopOf="@+id/item_price"
+            tools:text="@string/quantity" />
+
+
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/plus_layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_8sdp"
+            android:layout_marginRight="@dimen/_8sdp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/item_img"
+            app:layout_constraintTop_toTopOf="@+id/item_img">
+
+            <TextView
+                android:id="@+id/item_name"
+                android:textStyle="bold"
+                android:textSize="@dimen/_16sdp"
+                style="@style/cartBlackNormalTextStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/dimen_8"
+                android:gravity="right"
+                android:text="@{data.menu_categories_items.name}"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="item_name" />
+
+
+            <TextView
+                android:id="@+id/item_description"
+                style="@style/grayTopicTitleTextStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/dimen_8"
+                android:gravity="right"
+                android:text="@{data.menu_categories_items.descriptions}"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/item_name"
+                tools:text="item_description" />
+
+            <TextView
+                android:id="@+id/notes"
+                style="@style/grayTopicTitleTextStyle"
+
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/dimen_8"
+                android:gravity="right"
+                android:text="@{data.notes}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/item_description"
+                tools:text="item_notes" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "973773716968",
+    "project_id": "live-c230b",
+    "storage_bucket": "live-c230b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:973773716968:android:a15e4a244ec48b9caeb85d",
+        "android_client_info": {
+          "package_name": "com.codesroots.Live"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "973773716968-5uu19bqls7l9s3kk91402aqpae5827bn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAwxPbaTRrE03ftmbbjpE-bAxvyBoeBMSs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "973773716968-5uu19bqls7l9s3kk91402aqpae5827bn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

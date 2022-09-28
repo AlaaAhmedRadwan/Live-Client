@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <!--    <variable-->
+        <!--        name="data"-->
+        <!--        type="com.satafood.core.entities.homepage.CitiesModelItem" />-->
+
+        <variable
+            name="Context"
+            type="com.codesroots.live.presentation.map_activity.MapActivity" />
+        <!--    <variable-->
+        <!--        name="listener"-->
+        <!--        type="com.example.satafood.presentaion.ClickHandler"/>-->
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="12dp"
+            android:background="@drawable/opacity_back_g">
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/recent_location"
+                style="@style/topicTitleTextStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dimen_24"
+                android:text="@string/archive"
+                android:textColor="@color/white"
+                android:textSize="@dimen/dimen_24"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/filterLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/cornered_gray_background"
+                android:minHeight="@dimen/_30sdp"
+                app:layout_constraintTop_toBottomOf="@+id/recent_location">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/delivered"
+                    style="@style/blackNormalTextStyle"
+                    android:layout_width="0dp"
+                    android:minHeight="@dimen/_30sdp"
+                    android:layout_height="match_parent"
+                    android:text="تم التسليم"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintWidth_percent="0.33" />
+
+                <TextView
+                    android:id="@+id/canceledOrders"
+                    style="@style/blackNormalTextStyle"
+                    android:layout_width="0dp"
+                    android:minHeight="@dimen/_30sdp"
+
+                    android:layout_height="match_parent"
+                    android:text="@string/canceled"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/delivered"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintWidth_percent="0.33" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/issuesOrders"
+                    style="@style/blackNormalTextStyle"
+                    android:layout_width="0dp"
+                    android:minHeight="@dimen/_30sdp"
+
+                    android:layout_height="match_parent"
+                    android:text="@string/problem"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/canceledOrders"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintWidth_percent="0.33" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/startTime"
+                style="@style/topicTitleTextStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="32dp"
+                android:background="@drawable/shadow_back_g"
+                android:text="@string/startTime"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/filterLayout"
+                app:layout_constraintWidth_percent="0.4" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/endTime"
+                style="@style/topicTitleTextStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/shadow_back_g"
+                android:enabled="false"
+                android:text="@string/endTime"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/filterLayout"
+                app:layout_constraintWidth_percent="0.4" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/getData"
+                style="@style/topicTitleTextStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shadow_back_g"
+                android:padding="@dimen/dimen_8"
+                android:text="@string/search"
+                android:visibility="gone"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="@+id/startTime"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/endTime"
+                app:layout_constraintTop_toBottomOf="@+id/startTime"
+                app:layout_constraintWidth_percent="0.4" />
+
+            <View
+                android:id="@+id/guid"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/getData" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/dailyOrderRecycle"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="32dp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
+                app:layout_constraintHeight_percent="0.55"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/guid"
+                tools:itemCount="2"
+                tools:listitem="@layout/history_order_adapter" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dimen_8"
+                android:background="@drawable/shadow_back_g_12"
+                android:padding="@dimen/dimen_8"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/orderPriceText"
+                    style="@style/topicTitleTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="8dp"
+                    android:text="@string/total_without_delivery_fees"
+                    android:textSize="@dimen/dimen_12"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/deliveryTotalText" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/deliveryTotalText"
+                    style="@style/topicTitleTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="8dp"
+                    android:text="@string/deliveryTotalText"
+                    android:textSize="@dimen/dimen_12"
+
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="@string/deliveryTotalText" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/totalText"
+                    style="@style/topicTitleTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="8dp"
+                    android:fontFamily="@font/diin_bold"
+                    android:text="@string/totalText"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/orderPriceText" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/orderPriceValue"
+                    style="@style/topicTitleTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_16"
+                    android:text="0"
+                    android:textColor="@color/red2"
+                    android:textSize="@dimen/dimen_16"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/orderPriceText" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/deliveryTotal"
+                    style="@style/topicTitleTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_16"
+                    android:text="0"
+                    android:textColor="@color/red2"
+                    android:textSize="@dimen/dimen_16"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/deliveryTotalText" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/total"
+                    style="@style/topicTitleTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_16"
+                    android:fontFamily="@font/diin_bold"
+                    android:text="0"
+                    android:textColor="@color/red2"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/totalText" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <FrameLayout
+                android:id="@+id/progress"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ProgressBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/chooseDate"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="قم باختيار تاريخ لمراجعة الطلبات"
+                    android:textColor="@color/white"
+                    android:textSize="20dp" />
+            </FrameLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

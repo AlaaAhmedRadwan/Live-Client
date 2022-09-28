@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+                                                              
+                                                        
+    
+                 
+                       
+                                                                          
+
+                 
+                          
+                                                                               
+                 
+                           
+                                                            
+
+           
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+         android:tag="layout/current_order_item_0" xmlns:tools="http://schemas.android.com/tools" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/sort_recycle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shadow_back_g"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginRight="@dimen/dimen_16"
+                android:background="@drawable/shadowbackground"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:dividerHeight="0.0px"
+                android:innerRadius="0dp"
+                android:padding="@dimen/dimen_4"
+                android:shape="ring"
+                app:cardCornerRadius="75dp"
+                app:cardElevation="@dimen/dimen_4"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/appCompatImageView"
+                    android:layout_width="85dp"
+                    android:layout_height="85dp"
+                    android:padding="12dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/test"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/call"
+                    app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize50Percent.normal"
+                    app:strokeWidth="0dp" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/call"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="12dp"
+                android:scaleType="fitXY"
+                android:tag="binding_1"                                                         
+                android:src="@drawable/telephone"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/name"
+                style="@style/topicTitleTextStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:tag="binding_2"                                                                 
+                app:layout_constraintRight_toLeftOf="@+id/cardView"
+                app:layout_constraintTop_toTopOf="@+id/cardView" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/address"
+                style="@style/grayTopicTitleTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:tag="binding_3"                       
+                app:layout_constraintLeft_toLeftOf="parent"
+
+                app:layout_constraintBottom_toBottomOf="@+id/cardView"
+                app:layout_constraintRight_toLeftOf="@+id/cardView"
+                app:layout_constraintTop_toBottomOf="@+id/name" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/details_button"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_margin="16dp"
+                android:background="@drawable/orange_border_shape"
+                android:text="@string/details"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cardView"
+                app:layout_constraintWidth_percent="0.35" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+         

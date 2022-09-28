@@ -1,0 +1,42 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view"
+
+    >
+
+    <group
+
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/home"
+            android:title="@string/home_screen" />
+        <item
+            android:id="@+id/dailyOrder"
+            android:title="@string/dailyOrders"
+
+            />
+        <item
+            android:id="@+id/archiveOrders"
+            android:title="@string/archiveOrders" />
+        <item
+            android:id="@+id/current_orders"
+            android:title="@string/currentOrders" />
+
+        <item
+            android:id="@+id/profile"
+            android:title="@string/profile_personal"
+
+            />
+
+        <item
+            android:id="@+id/logout"
+            android:title="@string/logout" />
+
+        <!--            <item-->
+        <!--                    android:id="@+id/nav_send"-->
+        <!--                    android:icon="@drawable/ic_menu_send"-->
+        <!--                    android:title="@string/menu_send"/>-->
+
+
+    </group>
+</menu>

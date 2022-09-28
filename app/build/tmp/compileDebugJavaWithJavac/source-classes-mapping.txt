@@ -1,0 +1,227 @@
+com/codesroots/live/di/SocketModule_ProvideSocketFactory.java
+ com.codesroots.live.di.SocketModule_ProvideSocketFactory
+com/codesroots/live/databinding/NeworderFragmentBindingImpl.java
+ com.codesroots.live.databinding.NeworderFragmentBindingImpl
+com/codesroots/live/databinding/ProfileFragmentBinding.java
+ com.codesroots.live.databinding.ProfileFragmentBinding
+com/codesroots/live/databinding/NeworderFragmentBinding.java
+ com.codesroots.live.databinding.NeworderFragmentBinding
+com/codesroots/live/databinding/DailyOrdersAdapterBindingImpl.java
+ com.codesroots.live.databinding.DailyOrdersAdapterBindingImpl
+com/codesroots/live/repository/DataRepo_Factory.java
+ com.codesroots.live.repository.DataRepo_Factory
+com/codesroots/live/databinding/DetailsOrderAdapterBinding.java
+ com.codesroots.live.databinding.DetailsOrderAdapterBinding
+com/codesroots/live/databinding/CurrentOrdersAdapterBinding.java
+ com.codesroots.live.databinding.CurrentOrdersAdapterBinding
+androidx/databinding/DataBinderMapperImpl.java
+ androidx.databinding.DataBinderMapperImpl
+androidx/databinding/library/baseAdapters/BR.java
+ androidx.databinding.library.baseAdapters.BR
+com/codesroots/live/databinding/ProfileFragmentBindingImpl.java
+ com.codesroots.live.databinding.ProfileFragmentBindingImpl
+com/codesroots/live/presentation/new_order_bottomfragment/NewOrderFragment_Factory.java
+ com.codesroots.live.presentation.new_order_bottomfragment.NewOrderFragment_Factory
+com/codesroots/live/presentation/map_activity/MapActivity_MembersInjector.java
+ com.codesroots.live.presentation.map_activity.MapActivity_MembersInjector
+com/codesroots/live/databinding/CancelDialogBinding.java
+ com.codesroots.live.databinding.CancelDialogBinding
+com/codesroots/live/presentation/current_item/CurrentItemFragment_MembersInjector.java
+ com.codesroots.live.presentation.current_item.CurrentItemFragment_MembersInjector
+com/codesroots/live/di/DispatcherModule_ProvidesMainDispatcherFactory.java
+ com.codesroots.live.di.DispatcherModule_ProvidesMainDispatcherFactory
+ com.codesroots.live.di.DispatcherModule_ProvidesMainDispatcherFactory$InstanceHolder
+com/codesroots/live/databinding/CurrentOrderItemBindingImpl.java
+ com.codesroots.live.databinding.CurrentOrderItemBindingImpl
+com/codesroots/live/databinding/RowItemOrderTimeBinding.java
+ com.codesroots.live.databinding.RowItemOrderTimeBinding
+com/codesroots/live/di/DispatcherModule_ProvidesDefaultDispatcherFactory.java
+ com.codesroots.live.di.DispatcherModule_ProvidesDefaultDispatcherFactory
+ com.codesroots.live.di.DispatcherModule_ProvidesDefaultDispatcherFactory$InstanceHolder
+com/codesroots/live/presentation/splashScreen/SplashScreen_MembersInjector.java
+ com.codesroots.live.presentation.splashScreen.SplashScreen_MembersInjector
+com/codesroots/live/databinding/DailyOrdersFragmentBinding.java
+ com.codesroots.live.databinding.DailyOrdersFragmentBinding
+com/codesroots/live/DataBindingTriggerClass.java
+ com.codesroots.live.DataBindingTriggerClass
+com/codesroots/live/presentation/history_order_fragment/DailyOrdersFragment_Factory.java
+ com.codesroots.live.presentation.history_order_fragment.DailyOrdersFragment_Factory
+com/codesroots/live/di/AppModule_ProvideSweetAlertDialogFactory.java
+ com.codesroots.live.di.AppModule_ProvideSweetAlertDialogFactory
+com/codesroots/live/generated/callback/OnClickListener.java
+ com.codesroots.live.generated.callback.OnClickListener
+ com.codesroots.live.generated.callback.OnClickListener$Listener
+com/codesroots/live/databinding/BottomDialogBindingImpl.java
+ com.codesroots.live.databinding.BottomDialogBindingImpl
+com/codesroots/live/presentation/new_order_bottomfragment/NewOrderFragment_MembersInjector.java
+ com.codesroots.live.presentation.new_order_bottomfragment.NewOrderFragment_MembersInjector
+com/codesroots/live/helper/MyFragmentFactory_Factory.java
+ com.codesroots.live.helper.MyFragmentFactory_Factory
+com/codesroots/live/di/CoroutinesDispatcherProvider_Factory.java
+ com.codesroots.live.di.CoroutinesDispatcherProvider_Factory
+ com.codesroots.live.di.CoroutinesDispatcherProvider_Factory$InstanceHolder
+com/codesroots/live/di/ActivityBuildersModule_ContributeLoginActivity.java
+ com.codesroots.live.di.ActivityBuildersModule_ContributeLoginActivity
+ com.codesroots.live.di.ActivityBuildersModule_ContributeLoginActivity$LoginActivitySubcomponent
+ com.codesroots.live.di.ActivityBuildersModule_ContributeLoginActivity$LoginActivitySubcomponent$Factory
+com/codesroots/live/databinding/BottomDialogBinding.java
+ com.codesroots.live.databinding.BottomDialogBinding
+com/codesroots/live/di/APIModule_ProvideRetrofitFactory.java
+ com.codesroots.live.di.APIModule_ProvideRetrofitFactory
+com/codesroots/live/databinding/CurrentItemBinding.java
+ com.codesroots.live.databinding.CurrentItemBinding
+com/codesroots/live/di/APIModule_ProvideHttpClientFactory.java
+ com.codesroots.live.di.APIModule_ProvideHttpClientFactory
+com/codesroots/live/presentation/deliveries_fragment/DeliveriesFragment_MembersInjector.java
+ com.codesroots.live.presentation.deliveries_fragment.DeliveriesFragment_MembersInjector
+com/codesroots/live/databinding/HistoryOrderAdapterBinding.java
+ com.codesroots.live.databinding.HistoryOrderAdapterBinding
+com/codesroots/live/di/AppModule_ProvidePreferenceHelperFactory.java
+ com.codesroots.live.di.AppModule_ProvidePreferenceHelperFactory
+com/codesroots/live/di/DaggerAppComponent.java
+ com.codesroots.live.di.DaggerAppComponent
+ com.codesroots.live.di.DaggerAppComponent$1
+ com.codesroots.live.di.DaggerAppComponent$2
+ com.codesroots.live.di.DaggerAppComponent$3
+ com.codesroots.live.di.DaggerAppComponent$4
+ com.codesroots.live.di.DaggerAppComponent$Factory
+ com.codesroots.live.di.DaggerAppComponent$LoginActivitySubcomponentFactory
+ com.codesroots.live.di.DaggerAppComponent$LoginActivitySubcomponentImpl
+ com.codesroots.live.di.DaggerAppComponent$MainActivitySubcomponentFactory
+ com.codesroots.live.di.DaggerAppComponent$MainActivitySubcomponentImpl
+ com.codesroots.live.di.DaggerAppComponent$MapActivitySubcomponentFactory
+ com.codesroots.live.di.DaggerAppComponent$MapActivitySubcomponentImpl
+ com.codesroots.live.di.DaggerAppComponent$SplashScreenSubcomponentFactory
+ com.codesroots.live.di.DaggerAppComponent$SplashScreenSubcomponentImpl
+com/codesroots/live/presentation/deliveries_fragment/DeliveriesFragment_Factory.java
+ com.codesroots.live.presentation.deliveries_fragment.DeliveriesFragment_Factory
+com/codesroots/live/databinding/DeliveriesFragmentBindingImpl.java
+ com.codesroots.live.databinding.DeliveriesFragmentBindingImpl
+com/codesroots/live/databinding/NavHeaderMainBinding.java
+ com.codesroots.live.databinding.NavHeaderMainBinding
+com/codesroots/live/presentation/details_order_fragment/DetailsOrderFragment_Factory.java
+ com.codesroots.live.presentation.details_order_fragment.DetailsOrderFragment_Factory
+com/codesroots/live/databinding/LayoutDialogOrderTimeBinding.java
+ com.codesroots.live.databinding.LayoutDialogOrderTimeBinding
+com/codesroots/live/databinding/HistoryOrderAdapterBindingImpl.java
+ com.codesroots.live.databinding.HistoryOrderAdapterBindingImpl
+com/codesroots/live/databinding/CurrentOrderFragmentBinding.java
+ com.codesroots.live.databinding.CurrentOrderFragmentBinding
+com/codesroots/live/databinding/MapActivityBindingImpl.java
+ com.codesroots.live.databinding.MapActivityBindingImpl
+com/codesroots/live/presentation/profile_fragment/ProfileFragment_MembersInjector.java
+ com.codesroots.live.presentation.profile_fragment.ProfileFragment_MembersInjector
+com/codesroots/live/databinding/MapActivityBinding.java
+ com.codesroots.live.databinding.MapActivityBinding
+com/codesroots/live/databinding/CurrentOrderFragmentBindingImpl.java
+ com.codesroots.live.databinding.CurrentOrderFragmentBindingImpl
+com/codesroots/live/databinding/DailyOrdersAdapterBinding.java
+ com.codesroots.live.databinding.DailyOrdersAdapterBinding
+com/codesroots/live/BuildConfig.java
+ com.codesroots.live.BuildConfig
+com/codesroots/live/di/APIModule_ApiServicesFactory.java
+ com.codesroots.live.di.APIModule_ApiServicesFactory
+com/codesroots/live/di/ActivityBuildersModule_ContributeMainActivity.java
+ com.codesroots.live.di.ActivityBuildersModule_ContributeMainActivity
+ com.codesroots.live.di.ActivityBuildersModule_ContributeMainActivity$MainActivitySubcomponent
+ com.codesroots.live.di.ActivityBuildersModule_ContributeMainActivity$MainActivitySubcomponent$Factory
+com/codesroots/live/databinding/DetailsOrderFragmentBinding.java
+ com.codesroots.live.databinding.DetailsOrderFragmentBinding
+com/codesroots/live/helper/FileUtils.java
+ com.codesroots.live.helper.FileUtils
+ com.codesroots.live.helper.FileUtils$1
+ com.codesroots.live.helper.FileUtils$2
+ com.codesroots.live.helper.FileUtils$3
+com/codesroots/live/repository/RemoteDataSource_Factory.java
+ com.codesroots.live.repository.RemoteDataSource_Factory
+com/codesroots/live/di/ActivityBuildersModule_ContributeMapActivity.java
+ com.codesroots.live.di.ActivityBuildersModule_ContributeMapActivity
+ com.codesroots.live.di.ActivityBuildersModule_ContributeMapActivity$MapActivitySubcomponent
+ com.codesroots.live.di.ActivityBuildersModule_ContributeMapActivity$MapActivitySubcomponent$Factory
+com/codesroots/live/BR.java
+ com.codesroots.live.BR
+com/codesroots/live/presentation/auth/AuthViewModel_MembersInjector.java
+ com.codesroots.live.presentation.auth.AuthViewModel_MembersInjector
+com/codesroots/live/presentation/current_order_fragment/mvi/CurrentOrderViewModel_Factory.java
+ com.codesroots.live.presentation.current_order_fragment.mvi.CurrentOrderViewModel_Factory
+com/codesroots/live/presentation/history_order_fragment/mvi/HistoryOrderViewmodel_Factory.java
+ com.codesroots.live.presentation.history_order_fragment.mvi.HistoryOrderViewmodel_Factory
+com/codesroots/live/databinding/DailyOrdersFragmentBindingImpl.java
+ com.codesroots.live.databinding.DailyOrdersFragmentBindingImpl
+com/codesroots/live/databinding/DetailsOrderFragmentBindingImpl.java
+ com.codesroots.live.databinding.DetailsOrderFragmentBindingImpl
+com/codesroots/live/presentation/current_order_fragment/CurrentOrderFragment_MembersInjector.java
+ com.codesroots.live.presentation.current_order_fragment.CurrentOrderFragment_MembersInjector
+com/codesroots/live/di/APIModule_ProvideConverterFactoryFactory.java
+ com.codesroots.live.di.APIModule_ProvideConverterFactoryFactory
+com/codesroots/live/databinding/CurrentItemBindingImpl.java
+ com.codesroots.live.databinding.CurrentItemBindingImpl
+com/codesroots/live/di/AppModule_ProvideTasksBranchDataSourceFactory.java
+ com.codesroots.live.di.AppModule_ProvideTasksBranchDataSourceFactory
+com/codesroots/live/databinding/DeliveryItemBinding.java
+ com.codesroots.live.databinding.DeliveryItemBinding
+com/codesroots/live/presentation/auth/AuthViewModel_Factory.java
+ com.codesroots.live.presentation.auth.AuthViewModel_Factory
+com/codesroots/live/presentation/history_order_fragment/DailyOrdersFragment_MembersInjector.java
+ com.codesroots.live.presentation.history_order_fragment.DailyOrdersFragment_MembersInjector
+com/codesroots/live/di/DispatcherModule_ProvidesIoDispatcherFactory.java
+ com.codesroots.live.di.DispatcherModule_ProvidesIoDispatcherFactory
+ com.codesroots.live.di.DispatcherModule_ProvidesIoDispatcherFactory$InstanceHolder
+com/codesroots/live/presentation/profile_fragment/ProfileFragment_Factory.java
+ com.codesroots.live.presentation.profile_fragment.ProfileFragment_Factory
+com/codesroots/live/presentation/history_order_fragment/HistoryOrderFragment_Factory.java
+ com.codesroots.live.presentation.history_order_fragment.HistoryOrderFragment_Factory
+com/codesroots/live/databinding/HistoryOrdersFragmentBindingImpl.java
+ com.codesroots.live.databinding.HistoryOrdersFragmentBindingImpl
+com/codesroots/live/presentation/history_order_fragment/HistoryOrderFragment_MembersInjector.java
+ com.codesroots.live.presentation.history_order_fragment.HistoryOrderFragment_MembersInjector
+com/codesroots/live/databinding/DetailsOrderAdapterBindingImpl.java
+ com.codesroots.live.databinding.DetailsOrderAdapterBindingImpl
+com/codesroots/live/databinding/DeliveryLoginFragmentBindingImpl.java
+ com.codesroots.live.databinding.DeliveryLoginFragmentBindingImpl
+com/codesroots/live/helper/LocalStorageProvider.java
+ com.codesroots.live.helper.LocalStorageProvider
+com/codesroots/live/presentation/auth/LoginActivity_MembersInjector.java
+ com.codesroots.live.presentation.auth.LoginActivity_MembersInjector
+com/codesroots/live/databinding/RowItemOrderTimeBindingImpl.java
+ com.codesroots.live.databinding.RowItemOrderTimeBindingImpl
+com/codesroots/live/databinding/DeliveryItemBindingImpl.java
+ com.codesroots.live.databinding.DeliveryItemBindingImpl
+com/codesroots/live/DataBinderMapperImpl.java
+ com.codesroots.live.DataBinderMapperImpl
+ com.codesroots.live.DataBinderMapperImpl$InnerBrLookup
+ com.codesroots.live.DataBinderMapperImpl$InnerLayoutIdLookup
+com/codesroots/live/helper/ViewModelFactory_Factory.java
+ com.codesroots.live.helper.ViewModelFactory_Factory
+com/codesroots/live/databinding/NavHeaderMainBindingImpl.java
+ com.codesroots.live.databinding.NavHeaderMainBindingImpl
+com/codesroots/live/databinding/DeliveryLoginFragmentBinding.java
+ com.codesroots.live.databinding.DeliveryLoginFragmentBinding
+com/codesroots/live/presentation/current_item/CurrentItemFragment_Factory.java
+ com.codesroots.live.presentation.current_item.CurrentItemFragment_Factory
+com/codesroots/live/di/UnsafeOkHttpClient.java
+ com.codesroots.live.di.UnsafeOkHttpClient
+ com.codesroots.live.di.UnsafeOkHttpClient$1
+ com.codesroots.live.di.UnsafeOkHttpClient$2
+com/codesroots/live/presentation/current_order_fragment/CurrentOrderFragment_Factory.java
+ com.codesroots.live.presentation.current_order_fragment.CurrentOrderFragment_Factory
+com/codesroots/live/databinding/CancelDialogBindingImpl.java
+ com.codesroots.live.databinding.CancelDialogBindingImpl
+com/codesroots/live/databinding/LayoutDialogOrderTimeBindingImpl.java
+ com.codesroots.live.databinding.LayoutDialogOrderTimeBindingImpl
+com/codesroots/live/databinding/DeliveriesFragmentBinding.java
+ com.codesroots.live.databinding.DeliveriesFragmentBinding
+com/codesroots/live/presentation/profile_fragment/viewmodel/ProfileViewmodel_Factory.java
+ com.codesroots.live.presentation.profile_fragment.viewmodel.ProfileViewmodel_Factory
+com/codesroots/live/di/ActivityBuildersModule_ContributeSplashScreen.java
+ com.codesroots.live.di.ActivityBuildersModule_ContributeSplashScreen
+ com.codesroots.live.di.ActivityBuildersModule_ContributeSplashScreen$SplashScreenSubcomponent
+ com.codesroots.live.di.ActivityBuildersModule_ContributeSplashScreen$SplashScreenSubcomponent$Factory
+com/codesroots/live/databinding/HistoryOrdersFragmentBinding.java
+ com.codesroots.live.databinding.HistoryOrdersFragmentBinding
+androidx/databinding/DataBindingComponent.java
+ androidx.databinding.DataBindingComponent
+com/codesroots/live/databinding/CurrentOrderItemBinding.java
+ com.codesroots.live.databinding.CurrentOrderItemBinding
+com/codesroots/live/databinding/CurrentOrdersAdapterBindingImpl.java
+ com.codesroots.live.databinding.CurrentOrdersAdapterBindingImpl
