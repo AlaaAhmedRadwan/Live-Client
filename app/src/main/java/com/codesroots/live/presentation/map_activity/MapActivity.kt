@@ -78,6 +78,7 @@ import javax.inject.Inject
 import com.codesroots.live.R
 import com.codesroots.live.databinding.NavHeaderMainBinding
 import com.codesroots.live.presentation.current_order_fragment.mvi.MainIntent
+import com.codesroots.live.presentation.deliveries_fragment.DeliveriesFragment
 import java.util.*
 import kotlin.collections.ArrayList
 
@@ -292,7 +293,7 @@ class MapActivity : AppCompatActivity(), HasAndroidInjector, OnMapReadyCallback,
 
         note.setOnClickListener {
             note.setImageDrawable(ContextCompat.getDrawable(this, R.drawable.note_active));
-            ClickHandler().openDialogFragment(this, CurrentOrderFragment(), "")
+            ClickHandler().openDialogFragment(this, DeliveriesFragment(), "")
 
         }
 

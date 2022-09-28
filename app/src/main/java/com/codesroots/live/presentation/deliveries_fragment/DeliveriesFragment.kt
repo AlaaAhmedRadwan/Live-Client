@@ -67,7 +67,7 @@ class DeliveriesFragment @Inject constructor() : DialogFragment() {
         dialog!!.setCanceledOnTouchOutside(true);
 
 
-        val data = DeliveryItem(branch_id = data.branch_id, placeIdArea2 = "ChIJm5OFqK01WBQRGxd4QF0x30Y", placeIdArea3 = "ChIJq4shhFY2WBQRihZ2FrNxpD8")
+        val data = DeliveryItem(branch_id = data.branch_id, admivstrative_area_2 = "ChIJm5OFqK01WBQRGxd4QF0x30Y", admivstrative_area_3 = "ChIJw-sCFZZHWBQR0DOg7Az19FA")
 
         viewModel.getDeliveris(data)
 
@@ -86,9 +86,6 @@ class DeliveriesFragment @Inject constructor() : DialogFragment() {
                 WARN_MotionToast("", requireActivity())
             }
         }
-
-
-
         return view.root
     }
 

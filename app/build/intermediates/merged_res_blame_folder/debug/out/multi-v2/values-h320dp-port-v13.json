@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "E:\\LifeApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-h320dp-port-v13\\values-h320dp-port-v13.xml",
+            "outputFile": "E:\\LiveApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-h320dp-port-v13\\values-h320dp-port-v13.xml",
             "map": [
                 {
                     "source": "C:\\Users\\hossam\\.gradle\\caches\\transforms-3\\beef4c100d7cec03dbad8850ce39ba8d\\transformed\\material-1.6.1\\res\\values-h320dp-port-v13\\values-h320dp-port-v13.xml",

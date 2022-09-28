@@ -8,6 +8,7 @@ import com.codesroots.live.models.auth.User
 import com.codesroots.live.models.current_orders.*
 import com.codesroots.live.models.delivery.Delivery
 import com.codesroots.live.models.delivery.DeliveryItem
+import com.codesroots.live.models.ordermodel.OrderModel
 import com.satafood.core.entities.token.Token
 import okhttp3.MultipartBody
 
@@ -59,6 +60,9 @@ class RemoteDataSource @Inject constructor(private val ApiService: APIServices)
         return ApiService.updateUserToken(userId, token)
     }
 
+    override suspend fun AddOrder(orderInfo: OrderModel): Response<OrderModel> {
+        runCatching {  return  ApiService.AddOrder(orderInfo)    }.getOrElse { throw it }
+    }
 
 
     //changeDeliveryStatus

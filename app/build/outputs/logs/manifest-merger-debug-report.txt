@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from E:\LifeApp\app\src\main\AndroidManifest.xml:2:1-82:12
-INJECTED from E:\LifeApp\app\src\main\AndroidManifest.xml:2:1-82:12
-INJECTED from E:\LifeApp\app\src\main\AndroidManifest.xml:2:1-82:12
-INJECTED from E:\LifeApp\app\src\main\AndroidManifest.xml:2:1-82:12
+ADDED from E:\LiveApp\app\src\main\AndroidManifest.xml:2:1-82:12
+INJECTED from E:\LiveApp\app\src\main\AndroidManifest.xml:2:1-82:12
+INJECTED from E:\LiveApp\app\src\main\AndroidManifest.xml:2:1-82:12
+INJECTED from E:\LiveApp\app\src\main\AndroidManifest.xml:2:1-82:12
 MERGED from [androidx.databinding:databinding-adapters:7.0.4] C:\Users\hossam\.gradle\caches\transforms-3\b263ee44e7dd79b93eea3b4cab61bd04\transformed\databinding-adapters-7.0.4\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.databinding:databinding-ktx:7.0.4] C:\Users\hossam\.gradle\caches\transforms-3\ef0986eea61a5b95a9143afacce25a8b\transformed\jetified-databinding-ktx-7.0.4\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.databinding:databinding-runtime:7.0.4] C:\Users\hossam\.gradle\caches\transforms-3\a448d9ac950e76bf9df5069d732bc916\transformed\databinding-runtime-7.0.4\AndroidManifest.xml:17:1-22:12
@@ -156,27 +156,27 @@ MERGED from [com.android.volley:volley:1.2.1] C:\Users\hossam\.gradle\caches\tra
 MERGED from [com.google.dagger:dagger-lint-aar:2.35.1] C:\Users\hossam\.gradle\caches\transforms-3\da600d3c96daac13ba3e62468ed80c7a\transformed\jetified-dagger-lint-aar-2.35.1\AndroidManifest.xml:16:1-19:12
 MERGED from [pl.droidsonroids.relinker:relinker:1.4.1] C:\Users\hossam\.gradle\caches\transforms-3\d2bdd6cd6695af4cba8476d1abe264f9\transformed\jetified-relinker-1.4.1\AndroidManifest.xml:2:1-7:12
 MERGED from [com.android.installreferrer:installreferrer:1.0] C:\Users\hossam\.gradle\caches\transforms-3\4ad245cbf938bc5190fe5f4de9021ad5\transformed\jetified-installreferrer-1.0\AndroidManifest.xml:2:1-13:12
-INJECTED from E:\LifeApp\app\src\main\AndroidManifest.xml:2:1-82:12
-INJECTED from E:\LifeApp\app\src\main\AndroidManifest.xml:2:1-82:12
-INJECTED from E:\LifeApp\app\src\main\AndroidManifest.xml:2:1-82:12
+INJECTED from E:\LiveApp\app\src\main\AndroidManifest.xml:2:1-82:12
+INJECTED from E:\LiveApp\app\src\main\AndroidManifest.xml:2:1-82:12
+INJECTED from E:\LiveApp\app\src\main\AndroidManifest.xml:2:1-82:12
 	package
-		ADDED from E:\LifeApp\app\src\main\AndroidManifest.xml:4:5-34
-		INJECTED from E:\LifeApp\app\src\main\AndroidManifest.xml
-		INJECTED from E:\LifeApp\app\src\main\AndroidManifest.xml
+		ADDED from E:\LiveApp\app\src\main\AndroidManifest.xml:4:5-34
+		INJECTED from E:\LiveApp\app\src\main\AndroidManifest.xml
+		INJECTED from E:\LiveApp\app\src\main\AndroidManifest.xml
 	android:versionName
-		INJECTED from E:\LifeApp\app\src\main\AndroidManifest.xml
-		ADDED from E:\LifeApp\app\src\main\AndroidManifest.xml:2:1-82:12
-		INJECTED from E:\LifeApp\app\src\main\AndroidManifest.xml
+		INJECTED from E:\LiveApp\app\src\main\AndroidManifest.xml
+		ADDED from E:\LiveApp\app\src\main\AndroidManifest.xml:2:1-82:12
+		INJECTED from E:\LiveApp\app\src\main\AndroidManifest.xml
 	xmlns:tools
-		ADDED from E:\LifeApp\app\src\main\AndroidManifest.xml:3:5-51
+		ADDED from E:\LiveApp\app\src\main\AndroidManifest.xml:3:5-51
 	android:versionCode
-		INJECTED from E:\LifeApp\app\src\main\AndroidManifest.xml
-		ADDED from E:\LifeApp\app\src\main\AndroidManifest.xml:2:1-82:12
-		INJECTED from E:\LifeApp\app\src\main\AndroidManifest.xml
+		INJECTED from E:\LiveApp\app\src\main\AndroidManifest.xml
+		ADDED from E:\LiveApp\app\src\main\AndroidManifest.xml:2:1-82:12
+		INJECTED from E:\LiveApp\app\src\main\AndroidManifest.xml
 	xmlns:android
-		ADDED from E:\LifeApp\app\src\main\AndroidManifest.xml:2:11-69
+		ADDED from E:\LiveApp\app\src\main\AndroidManifest.xml:2:11-69
 uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from E:\LifeApp\app\src\main\AndroidManifest.xml:7:5-79
+ADDED from E:\LiveApp\app\src\main\AndroidManifest.xml:7:5-79
 MERGED from [com.google.android.gms:play-services-maps:18.0.0] C:\Users\hossam\.gradle\caches\transforms-3\d1940ad6028f513a59383edf43ebbf0f\transformed\jetified-play-services-maps-18.0.0\AndroidManifest.xml:23:5-79
 MERGED from [com.google.android.gms:play-services-maps:18.0.0] C:\Users\hossam\.gradle\caches\transforms-3\d1940ad6028f513a59383edf43ebbf0f\transformed\jetified-play-services-maps-18.0.0\AndroidManifest.xml:23:5-79
 MERGED from [com.google.firebase:firebase-messaging:23.0.6] C:\Users\hossam\.gradle\caches\transforms-3\8434836370b639db13ca894d960b5d8d\transformed\jetified-firebase-messaging-23.0.6\AndroidManifest.xml:25:5-79
@@ -198,9 +198,9 @@ MERGED from [com.google.android.datatransport:transport-backend-cct:3.1.6] C:\Us
 MERGED from [com.google.android.datatransport:transport-runtime:3.1.6] C:\Users\hossam\.gradle\caches\transforms-3\70afa782537f194b3184441f1e5c050b\transformed\jetified-transport-runtime-3.1.6\AndroidManifest.xml:22:5-79
 MERGED from [com.google.android.datatransport:transport-runtime:3.1.6] C:\Users\hossam\.gradle\caches\transforms-3\70afa782537f194b3184441f1e5c050b\transformed\jetified-transport-runtime-3.1.6\AndroidManifest.xml:22:5-79
 	android:name
-		ADDED from E:\LifeApp\app\src\main\AndroidManifest.xml:7:22-76
+		ADDED from E:\LiveApp\app\src\main\AndroidManifest.xml:7:22-76
 uses-permission#android.permission.INTERNET
-ADDED from E:\LifeApp\app\src\main\AndroidManifest.xml:10:5-67
+ADDED from E:\LiveApp\app\src\main\AndroidManifest.xml:10:5-67
 MERGED from [com.google.android.libraries.places:places:2.5.0] C:\Users\hossam\.gradle\caches\transforms-3\e66e31bf3b46b3317ebc53480ba8bbcb\transformed\jetified-places-2.5.0\AndroidManifest.xml:11:5-67
 MERGED from [com.google.android.libraries.places:places:2.5.0] C:\Users\hossam\.gradle\caches\transforms-3\e66e31bf3b46b3317ebc53480ba8bbcb\transformed\jetified-places-2.5.0\AndroidManifest.xml:11:5-67
 MERGED from [com.google.android.gms:play-services-maps:18.0.0] C:\Users\hossam\.gradle\caches\transforms-3\d1940ad6028f513a59383edf43ebbf0f\transformed\jetified-play-services-maps-18.0.0\AndroidManifest.xml:24:5-67
@@ -222,45 +222,45 @@ MERGED from [com.google.android.gms:play-services-measurement-sdk-api:21.0.0] C:
 MERGED from [com.google.android.datatransport:transport-backend-cct:3.1.6] C:\Users\hossam\.gradle\caches\transforms-3\fbb8df2e596f75bd3bf93ff32c8e9ba2\transformed\jetified-transport-backend-cct-3.1.6\AndroidManifest.xml:26:5-67
 MERGED from [com.google.android.datatransport:transport-backend-cct:3.1.6] C:\Users\hossam\.gradle\caches\transforms-3\fbb8df2e596f75bd3bf93ff32c8e9ba2\transformed\jetified-transport-backend-cct-3.1.6\AndroidManifest.xml:26:5-67
 	android:name
-		ADDED from E:\LifeApp\app\src\main\AndroidManifest.xml:10:22-64
+		ADDED from E:\LiveApp\app\src\main\AndroidManifest.xml:10:22-64
 uses-permission#android.permission.ACCESS_FINE_LOCATION
-ADDED from E:\LifeApp\app\src\main\AndroidManifest.xml:11:5-79
+ADDED from E:\LiveApp\app\src\main\AndroidManifest.xml:11:5-79
 MERGED from [com.google.android.libraries.places:places:2.5.0] C:\Users\hossam\.gradle\caches\transforms-3\e66e31bf3b46b3317ebc53480ba8bbcb\transformed\jetified-places-2.5.0\AndroidManifest.xml:9:5-79
 MERGED from [com.google.android.libraries.places:places:2.5.0] C:\Users\hossam\.gradle\caches\transforms-3\e66e31bf3b46b3317ebc53480ba8bbcb\transformed\jetified-places-2.5.0\AndroidManifest.xml:9:5-79
 	android:name
-		ADDED from E:\LifeApp\app\src\main\AndroidManifest.xml:11:22-76
+		ADDED from E:\LiveApp\app\src\main\AndroidManifest.xml:11:22-76
 uses-permission#android.permission.ACCESS_COARSE_LOCATION
-ADDED from E:\LifeApp\app\src\main\AndroidManifest.xml:12:5-80
+ADDED from E:\LiveApp\app\src\main\AndroidManifest.xml:12:5-80
 	android:name
-		ADDED from E:\LifeApp\app\src\main\AndroidManifest.xml:12:22-78
+		ADDED from E:\LiveApp\app\src\main\AndroidManifest.xml:12:22-78
 uses-permission#android.permission.READ_PHONE_STATE
-ADDED from E:\LifeApp\app\src\main\AndroidManifest.xml:13:5-75
+ADDED from E:\LiveApp\app\src\main\AndroidManifest.xml:13:5-75
 	android:name
-		ADDED from E:\LifeApp\app\src\main\AndroidManifest.xml:13:22-72
+		ADDED from E:\LiveApp\app\src\main\AndroidManifest.xml:13:22-72
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
-ADDED from E:\LifeApp\app\src\main\AndroidManifest.xml:14:5-81
+ADDED from E:\LiveApp\app\src\main\AndroidManifest.xml:14:5-81
 	android:name
-		ADDED from E:\LifeApp\app\src\main\AndroidManifest.xml:14:22-78
+		ADDED from E:\LiveApp\app\src\main\AndroidManifest.xml:14:22-78
 uses-permission#android.permission.CAMERA
-ADDED from E:\LifeApp\app\src\main\AndroidManifest.xml:15:5-65
+ADDED from E:\LiveApp\app\src\main\AndroidManifest.xml:15:5-65
 	android:name
-		ADDED from E:\LifeApp\app\src\main\AndroidManifest.xml:15:22-62
+		ADDED from E:\LiveApp\app\src\main\AndroidManifest.xml:15:22-62
 uses-permission#android.permission.CALL_PHONE
-ADDED from E:\LifeApp\app\src\main\AndroidManifest.xml:16:5-68
+ADDED from E:\LiveApp\app\src\main\AndroidManifest.xml:16:5-68
 	android:name
-		ADDED from E:\LifeApp\app\src\main\AndroidManifest.xml:16:22-66
+		ADDED from E:\LiveApp\app\src\main\AndroidManifest.xml:16:22-66
 uses-feature#android.hardware.camera
-ADDED from E:\LifeApp\app\src\main\AndroidManifest.xml:19:5-20:35
+ADDED from E:\LiveApp\app\src\main\AndroidManifest.xml:19:5-20:35
 	android:required
-		ADDED from E:\LifeApp\app\src\main\AndroidManifest.xml:20:9-32
+		ADDED from E:\LiveApp\app\src\main\AndroidManifest.xml:20:9-32
 	android:name
-		ADDED from E:\LifeApp\app\src\main\AndroidManifest.xml:19:19-57
+		ADDED from E:\LiveApp\app\src\main\AndroidManifest.xml:19:19-57
 uses-permission#com.google.android.providers.gsf.permission.READ_GSERVICES
-ADDED from E:\LifeApp\app\src\main\AndroidManifest.xml:21:5-97
+ADDED from E:\LiveApp\app\src\main\AndroidManifest.xml:21:5-97
 	android:name
-		ADDED from E:\LifeApp\app\src\main\AndroidManifest.xml:21:22-95
+		ADDED from E:\LiveApp\app\src\main\AndroidManifest.xml:21:22-95
 application
-ADDED from E:\LifeApp\app\src\main\AndroidManifest.xml:23:5-80:19
+ADDED from E:\LiveApp\app\src\main\AndroidManifest.xml:23:5-80:19
 MERGED from [org.jetbrains.anko:anko:0.10.7] C:\Users\hossam\.gradle\caches\transforms-3\37a907cadffae21575fa7ed0cbe92587\transformed\jetified-anko-0.10.7\AndroidManifest.xml:11:5-20
 MERGED from [org.jetbrains.anko:anko:0.10.7] C:\Users\hossam\.gradle\caches\transforms-3\37a907cadffae21575fa7ed0cbe92587\transformed\jetified-anko-0.10.7\AndroidManifest.xml:11:5-20
 MERGED from [org.jetbrains.anko:anko-coroutines:0.10.7] C:\Users\hossam\.gradle\caches\transforms-3\6a49556c8f9a3756a6e8a4466e7df614\transformed\jetified-anko-coroutines-0.10.7\AndroidManifest.xml:11:5-20
@@ -390,103 +390,103 @@ MERGED from [com.pnikosis:materialish-progress:1.7] C:\Users\hossam\.gradle\cach
 MERGED from [com.android.installreferrer:installreferrer:1.0] C:\Users\hossam\.gradle\caches\transforms-3\4ad245cbf938bc5190fe5f4de9021ad5\transformed\jetified-installreferrer-1.0\AndroidManifest.xml:11:5-20
 MERGED from [com.android.installreferrer:installreferrer:1.0] C:\Users\hossam\.gradle\caches\transforms-3\4ad245cbf938bc5190fe5f4de9021ad5\transformed\jetified-installreferrer-1.0\AndroidManifest.xml:11:5-20
 	android:requestLegacyExternalStorage
-		ADDED from E:\LifeApp\app\src\main\AndroidManifest.xml:34:9-52
+		ADDED from E:\LiveApp\app\src\main\AndroidManifest.xml:34:9-52
 	android:windowSoftInputMode
-		ADDED from E:\LifeApp\app\src\main\AndroidManifest.xml:32:9-51
+		ADDED from E:\LiveApp\app\src\main\AndroidManifest.xml:32:9-51
 	android:roundIcon
-		ADDED from E:\LifeApp\app\src\main\AndroidManifest.xml:26:9-54
+		ADDED from E:\LiveApp\app\src\main\AndroidManifest.xml:26:9-54
 	android:icon
-		ADDED from E:\LifeApp\app\src\main\AndroidManifest.xml:25:9-43
+		ADDED from E:\LiveApp\app\src\main\AndroidManifest.xml:25:9-43
 	android:networkSecurityConfig
-		ADDED from E:\LifeApp\app\src\main\AndroidManifest.xml:27:9-69
+		ADDED from E:\LiveApp\app\src\main\AndroidManifest.xml:27:9-69
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.6.0] C:\Users\hossam\.gradle\caches\transforms-3\d788cd2adaed3a3bd195ca2df243a270\transformed\core-1.6.0\AndroidManifest.xml:24:18-86
 	android:supportsRtl
-		ADDED from E:\LifeApp\app\src\main\AndroidManifest.xml:36:9-35
+		ADDED from E:\LiveApp\app\src\main\AndroidManifest.xml:36:9-35
 	android:label
-		ADDED from E:\LifeApp\app\src\main\AndroidManifest.xml:30:9-41
+		ADDED from E:\LiveApp\app\src\main\AndroidManifest.xml:30:9-41
 	android:hardwareAccelerated
-		ADDED from E:\LifeApp\app\src\main\AndroidManifest.xml:35:9-43
+		ADDED from E:\LiveApp\app\src\main\AndroidManifest.xml:35:9-43
 	android:installLocation
-		ADDED from E:\LifeApp\app\src\main\AndroidManifest.xml:29:9-49
+		ADDED from E:\LiveApp\app\src\main\AndroidManifest.xml:29:9-49
 	android:allowBackup
-		ADDED from E:\LifeApp\app\src\main\AndroidManifest.xml:24:9-35
+		ADDED from E:\LiveApp\app\src\main\AndroidManifest.xml:24:9-35
 	android:theme
-		ADDED from E:\LifeApp\app\src\main\AndroidManifest.xml:37:9-52
+		ADDED from E:\LiveApp\app\src\main\AndroidManifest.xml:37:9-52
 	android:usesCleartextTraffic
-		ADDED from E:\LifeApp\app\src\main\AndroidManifest.xml:33:9-44
+		ADDED from E:\LiveApp\app\src\main\AndroidManifest.xml:33:9-44
 	android:name
-		ADDED from E:\LifeApp\app\src\main\AndroidManifest.xml:31:9-66
+		ADDED from E:\LiveApp\app\src\main\AndroidManifest.xml:31:9-66
 activity#com.codesroots.live.MainActivity
-ADDED from E:\LifeApp\app\src\main\AndroidManifest.xml:39:9-43:20
+ADDED from E:\LiveApp\app\src\main\AndroidManifest.xml:39:9-43:20
 	android:exported
-		ADDED from E:\LifeApp\app\src\main\AndroidManifest.xml:41:13-36
+		ADDED from E:\LiveApp\app\src\main\AndroidManifest.xml:41:13-36
 	android:name
-		ADDED from E:\LifeApp\app\src\main\AndroidManifest.xml:40:13-60
+		ADDED from E:\LiveApp\app\src\main\AndroidManifest.xml:40:13-60
 activity#com.codesroots.live.presentation.auth.LoginActivity
-ADDED from E:\LifeApp\app\src\main\AndroidManifest.xml:44:9-50:20
+ADDED from E:\LiveApp\app\src\main\AndroidManifest.xml:44:9-50:20
 	android:screenOrientation
-		ADDED from E:\LifeApp\app\src\main\AndroidManifest.xml:47:13-55
+		ADDED from E:\LiveApp\app\src\main\AndroidManifest.xml:47:13-55
 	android:exported
-		ADDED from E:\LifeApp\app\src\main\AndroidManifest.xml:46:13-36
+		ADDED from E:\LiveApp\app\src\main\AndroidManifest.xml:46:13-36
 	android:name
-		ADDED from E:\LifeApp\app\src\main\AndroidManifest.xml:45:13-79
+		ADDED from E:\LiveApp\app\src\main\AndroidManifest.xml:45:13-79
 activity#com.codesroots.live.presentation.map_activity.MapActivity
-ADDED from E:\LifeApp\app\src\main\AndroidManifest.xml:51:9-57:20
+ADDED from E:\LiveApp\app\src\main\AndroidManifest.xml:51:9-57:20
 	android:screenOrientation
-		ADDED from E:\LifeApp\app\src\main\AndroidManifest.xml:54:13-55
+		ADDED from E:\LiveApp\app\src\main\AndroidManifest.xml:54:13-55
 	android:exported
-		ADDED from E:\LifeApp\app\src\main\AndroidManifest.xml:53:13-36
+		ADDED from E:\LiveApp\app\src\main\AndroidManifest.xml:53:13-36
 	android:name
-		ADDED from E:\LifeApp\app\src\main\AndroidManifest.xml:52:13-85
+		ADDED from E:\LiveApp\app\src\main\AndroidManifest.xml:52:13-85
 activity#com.codesroots.live.presentation.splashScreen.SplashScreen
-ADDED from E:\LifeApp\app\src\main\AndroidManifest.xml:58:9-66:20
+ADDED from E:\LiveApp\app\src\main\AndroidManifest.xml:58:9-66:20
 	android:exported
-		ADDED from E:\LifeApp\app\src\main\AndroidManifest.xml:60:13-36
+		ADDED from E:\LiveApp\app\src\main\AndroidManifest.xml:60:13-36
 	android:name
-		ADDED from E:\LifeApp\app\src\main\AndroidManifest.xml:59:13-86
+		ADDED from E:\LiveApp\app\src\main\AndroidManifest.xml:59:13-86
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from E:\LifeApp\app\src\main\AndroidManifest.xml:61:13-65:29
+ADDED from E:\LiveApp\app\src\main\AndroidManifest.xml:61:13-65:29
 action#android.intent.action.MAIN
-ADDED from E:\LifeApp\app\src\main\AndroidManifest.xml:62:17-69
+ADDED from E:\LiveApp\app\src\main\AndroidManifest.xml:62:17-69
 	android:name
-		ADDED from E:\LifeApp\app\src\main\AndroidManifest.xml:62:25-66
+		ADDED from E:\LiveApp\app\src\main\AndroidManifest.xml:62:25-66
 category#android.intent.category.LAUNCHER
-ADDED from E:\LifeApp\app\src\main\AndroidManifest.xml:64:17-77
+ADDED from E:\LiveApp\app\src\main\AndroidManifest.xml:64:17-77
 	android:name
-		ADDED from E:\LifeApp\app\src\main\AndroidManifest.xml:64:27-74
+		ADDED from E:\LiveApp\app\src\main\AndroidManifest.xml:64:27-74
 meta-data#com.google.android.gms.version
-ADDED from E:\LifeApp\app\src\main\AndroidManifest.xml:67:9-68:69
+ADDED from E:\LiveApp\app\src\main\AndroidManifest.xml:67:9-68:69
 MERGED from [com.google.android.gms:play-services-basement:18.0.0] C:\Users\hossam\.gradle\caches\transforms-3\628ab2bb6d99a8c67cf7c6a1d5e9c16c\transformed\jetified-play-services-basement-18.0.0\AndroidManifest.xml:21:9-23:69
 MERGED from [com.google.android.gms:play-services-basement:18.0.0] C:\Users\hossam\.gradle\caches\transforms-3\628ab2bb6d99a8c67cf7c6a1d5e9c16c\transformed\jetified-play-services-basement-18.0.0\AndroidManifest.xml:21:9-23:69
 MERGED from [com.google.maps.android:android-maps-utils:0.4.4] C:\Users\hossam\.gradle\caches\transforms-3\149a4b3b28b4268ecc670cdfac8f9d3b\transformed\jetified-android-maps-utils-0.4.4\AndroidManifest.xml:8:9-10:69
 MERGED from [com.google.maps.android:android-maps-utils:0.4.4] C:\Users\hossam\.gradle\caches\transforms-3\149a4b3b28b4268ecc670cdfac8f9d3b\transformed\jetified-android-maps-utils-0.4.4\AndroidManifest.xml:8:9-10:69
 	android:value
-		ADDED from E:\LifeApp\app\src\main\AndroidManifest.xml:68:13-66
+		ADDED from E:\LiveApp\app\src\main\AndroidManifest.xml:68:13-66
 	android:name
-		ADDED from E:\LifeApp\app\src\main\AndroidManifest.xml:67:20-65
+		ADDED from E:\LiveApp\app\src\main\AndroidManifest.xml:67:20-65
 meta-data#com.google.android.geo.API_KEY
-ADDED from E:\LifeApp\app\src\main\AndroidManifest.xml:69:9-71:71
+ADDED from E:\LiveApp\app\src\main\AndroidManifest.xml:69:9-71:71
 	android:value
-		ADDED from E:\LifeApp\app\src\main\AndroidManifest.xml:71:13-68
+		ADDED from E:\LiveApp\app\src\main\AndroidManifest.xml:71:13-68
 	android:name
-		ADDED from E:\LifeApp\app\src\main\AndroidManifest.xml:70:13-58
+		ADDED from E:\LiveApp\app\src\main\AndroidManifest.xml:70:13-58
 service#com.codesroots.live.datalayer.PushNotificationService
-ADDED from E:\LifeApp\app\src\main\AndroidManifest.xml:73:9-79:19
+ADDED from E:\LiveApp\app\src\main\AndroidManifest.xml:73:9-79:19
 	android:exported
-		ADDED from E:\LifeApp\app\src\main\AndroidManifest.xml:75:13-37
+		ADDED from E:\LiveApp\app\src\main\AndroidManifest.xml:75:13-37
 	android:name
-		ADDED from E:\LifeApp\app\src\main\AndroidManifest.xml:74:13-81
+		ADDED from E:\LiveApp\app\src\main\AndroidManifest.xml:74:13-81
 intent-filter#action:name:com.google.firebase.MESSAGING_EVENT
-ADDED from E:\LifeApp\app\src\main\AndroidManifest.xml:76:13-78:29
+ADDED from E:\LiveApp\app\src\main\AndroidManifest.xml:76:13-78:29
 action#com.google.firebase.MESSAGING_EVENT
-ADDED from E:\LifeApp\app\src\main\AndroidManifest.xml:77:17-78
+ADDED from E:\LiveApp\app\src\main\AndroidManifest.xml:77:17-78
 	android:name
-		ADDED from E:\LifeApp\app\src\main\AndroidManifest.xml:77:25-75
+		ADDED from E:\LiveApp\app\src\main\AndroidManifest.xml:77:25-75
 uses-sdk
-INJECTED from E:\LifeApp\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from E:\LifeApp\app\src\main\AndroidManifest.xml
-INJECTED from E:\LifeApp\app\src\main\AndroidManifest.xml
+INJECTED from E:\LiveApp\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from E:\LiveApp\app\src\main\AndroidManifest.xml
+INJECTED from E:\LiveApp\app\src\main\AndroidManifest.xml
 MERGED from [androidx.databinding:databinding-adapters:7.0.4] C:\Users\hossam\.gradle\caches\transforms-3\b263ee44e7dd79b93eea3b4cab61bd04\transformed\databinding-adapters-7.0.4\AndroidManifest.xml:20:5-44
 MERGED from [androidx.databinding:databinding-adapters:7.0.4] C:\Users\hossam\.gradle\caches\transforms-3\b263ee44e7dd79b93eea3b4cab61bd04\transformed\databinding-adapters-7.0.4\AndroidManifest.xml:20:5-44
 MERGED from [androidx.databinding:databinding-ktx:7.0.4] C:\Users\hossam\.gradle\caches\transforms-3\ef0986eea61a5b95a9143afacce25a8b\transformed\jetified-databinding-ktx-7.0.4\AndroidManifest.xml:20:5-44
@@ -791,16 +791,16 @@ MERGED from [pl.droidsonroids.relinker:relinker:1.4.1] C:\Users\hossam\.gradle\c
 MERGED from [pl.droidsonroids.relinker:relinker:1.4.1] C:\Users\hossam\.gradle\caches\transforms-3\d2bdd6cd6695af4cba8476d1abe264f9\transformed\jetified-relinker-1.4.1\AndroidManifest.xml:5:5-43
 MERGED from [com.android.installreferrer:installreferrer:1.0] C:\Users\hossam\.gradle\caches\transforms-3\4ad245cbf938bc5190fe5f4de9021ad5\transformed\jetified-installreferrer-1.0\AndroidManifest.xml:5:5-7:41
 MERGED from [com.android.installreferrer:installreferrer:1.0] C:\Users\hossam\.gradle\caches\transforms-3\4ad245cbf938bc5190fe5f4de9021ad5\transformed\jetified-installreferrer-1.0\AndroidManifest.xml:5:5-7:41
-INJECTED from E:\LifeApp\app\src\main\AndroidManifest.xml
-INJECTED from E:\LifeApp\app\src\main\AndroidManifest.xml
+INJECTED from E:\LiveApp\app\src\main\AndroidManifest.xml
+INJECTED from E:\LiveApp\app\src\main\AndroidManifest.xml
 	android:targetSdkVersion
-		INJECTED from E:\LifeApp\app\src\main\AndroidManifest.xml
-		ADDED from E:\LifeApp\app\src\main\AndroidManifest.xml
-		INJECTED from E:\LifeApp\app\src\main\AndroidManifest.xml
+		INJECTED from E:\LiveApp\app\src\main\AndroidManifest.xml
+		ADDED from E:\LiveApp\app\src\main\AndroidManifest.xml
+		INJECTED from E:\LiveApp\app\src\main\AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from E:\LifeApp\app\src\main\AndroidManifest.xml
-		ADDED from E:\LifeApp\app\src\main\AndroidManifest.xml
-		INJECTED from E:\LifeApp\app\src\main\AndroidManifest.xml
+		INJECTED from E:\LiveApp\app\src\main\AndroidManifest.xml
+		ADDED from E:\LiveApp\app\src\main\AndroidManifest.xml
+		INJECTED from E:\LiveApp\app\src\main\AndroidManifest.xml
 queries
 ADDED from [com.github.dhaval2404:imagepicker:2.1] C:\Users\hossam\.gradle\caches\transforms-3\ce27dc255ae235b5777d7460fb63623d\transformed\jetified-imagepicker-2.1\AndroidManifest.xml:9:5-19:15
 MERGED from [androidx.test:runner:1.4.0] C:\Users\hossam\.gradle\caches\transforms-3\e65056b070284217a7be3f0fa03c5251\transformed\runner-1.4.0\AndroidManifest.xml:24:5-28:15

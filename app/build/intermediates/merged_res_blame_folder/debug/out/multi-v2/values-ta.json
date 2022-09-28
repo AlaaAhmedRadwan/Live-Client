@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "E:\\LifeApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-ta\\values-ta.xml",
+            "outputFile": "E:\\LiveApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-ta\\values-ta.xml",
             "map": [
                 {
                     "source": "C:\\Users\\hossam\\.gradle\\caches\\transforms-3\\628ab2bb6d99a8c67cf7c6a1d5e9c16c\\transformed\\jetified-play-services-basement-18.0.0\\res\\values-ta\\values.xml",

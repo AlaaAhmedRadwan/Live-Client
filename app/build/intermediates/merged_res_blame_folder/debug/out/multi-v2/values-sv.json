@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "E:\\LifeApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-sv\\values-sv.xml",
+            "outputFile": "E:\\LiveApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-sv\\values-sv.xml",
             "map": [
                 {
                     "source": "C:\\Users\\hossam\\.gradle\\caches\\transforms-3\\2418c580aad05b97353195c494f580a6\\transformed\\jetified-facebook-login-5.15.3\\res\\values-sv\\values-sv.xml",

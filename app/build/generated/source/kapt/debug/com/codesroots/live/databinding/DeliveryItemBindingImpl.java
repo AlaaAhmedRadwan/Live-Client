@@ -5,7 +5,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import android.view.View;
 @SuppressWarnings("unchecked")
-public class DeliveryItemBindingImpl extends DeliveryItemBinding implements com.codesroots.live.generated.callback.OnClickListener.Listener {
+public class DeliveryItemBindingImpl extends DeliveryItemBinding  {
 
     @Nullable
     private static final androidx.databinding.ViewDataBinding.IncludedLayouts sIncludes;
@@ -15,35 +15,42 @@ public class DeliveryItemBindingImpl extends DeliveryItemBinding implements com.
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
         sViewsWithIds.put(R.id.mView, 3);
-        sViewsWithIds.put(R.id.iv_image, 4);
+        sViewsWithIds.put(R.id.deliveryServiceContainer, 4);
+        sViewsWithIds.put(R.id.deliveryService, 5);
+        sViewsWithIds.put(R.id.totalContainer, 6);
+        sViewsWithIds.put(R.id.total, 7);
+        sViewsWithIds.put(R.id.send, 8);
+        sViewsWithIds.put(R.id.progress, 9);
     }
     // views
     @NonNull
     private final androidx.constraintlayout.widget.ConstraintLayout mboundView0;
     // variables
-    @Nullable
-    private final android.view.View.OnClickListener mCallback2;
     // values
     // listeners
     // Inverse Binding Event Handlers
 
     public DeliveryItemBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 5, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 10, sIncludes, sViewsWithIds));
     }
     private DeliveryItemBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 0
-            , (androidx.appcompat.widget.AppCompatImageView) bindings[1]
-            , (com.makeramen.roundedimageview.RoundedImageView) bindings[4]
+            , (com.google.android.material.textfield.TextInputEditText) bindings[5]
+            , (com.google.android.material.textfield.TextInputLayout) bindings[4]
+            , (com.google.android.material.imageview.ShapeableImageView) bindings[1]
             , (androidx.constraintlayout.widget.ConstraintLayout) bindings[3]
             , (androidx.appcompat.widget.AppCompatTextView) bindings[2]
+            , (android.widget.FrameLayout) bindings[9]
+            , (androidx.appcompat.widget.AppCompatButton) bindings[8]
+            , (com.google.android.material.textfield.TextInputEditText) bindings[7]
+            , (com.google.android.material.textfield.TextInputLayout) bindings[6]
             );
-        this.call.setTag(null);
+        this.ivImage.setTag(null);
         this.mboundView0 = (androidx.constraintlayout.widget.ConstraintLayout) bindings[0];
         this.mboundView0.setTag(null);
         this.name.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback2 = new com.codesroots.live.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -85,19 +92,9 @@ public class DeliveryItemBindingImpl extends DeliveryItemBinding implements com.
 
     public void setContext(@Nullable com.codesroots.live.presentation.map_activity.MapActivity Context) {
         this.mContext = Context;
-        synchronized(this) {
-            mDirtyFlags |= 0x1L;
-        }
-        notifyPropertyChanged(BR.Context);
-        super.requestRebind();
     }
     public void setListener(@Nullable com.codesroots.live.helper.ClickHandler Listener) {
         this.mListener = Listener;
-        synchronized(this) {
-            mDirtyFlags |= 0x2L;
-        }
-        notifyPropertyChanged(BR.listener);
-        super.requestRebind();
     }
     public void setData(@Nullable com.codesroots.live.models.delivery.DeliveryItem Data) {
         this.mData = Data;
@@ -122,8 +119,7 @@ public class DeliveryItemBindingImpl extends DeliveryItemBinding implements com.
             dirtyFlags = mDirtyFlags;
             mDirtyFlags = 0;
         }
-        com.codesroots.live.presentation.map_activity.MapActivity context = mContext;
-        com.codesroots.live.helper.ClickHandler listener = mListener;
+        java.lang.String dataPhoto = null;
         java.lang.String dataName = null;
         com.codesroots.live.models.delivery.DeliveryItem data = mData;
         java.lang.String dataNameJavaLangString = null;
@@ -133,6 +129,8 @@ public class DeliveryItemBindingImpl extends DeliveryItemBinding implements com.
 
 
                 if (data != null) {
+                    // read data.photo
+                    dataPhoto = data.getPhoto();
                     // read data.name
                     dataName = data.getName();
                 }
@@ -142,52 +140,15 @@ public class DeliveryItemBindingImpl extends DeliveryItemBinding implements com.
                 dataNameJavaLangString = (dataName) + (" ");
         }
         // batch finished
-        if ((dirtyFlags & 0x8L) != 0) {
-            // api target 1
-
-            this.call.setOnClickListener(mCallback2);
-        }
         if ((dirtyFlags & 0xcL) != 0) {
             // api target 1
 
+            com.codesroots.live.helper.Public_usecaseKt.setImageResource(this.ivImage, dataPhoto);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.name, dataNameJavaLangString);
         }
     }
     // Listener Stub Implementations
     // callback impls
-    public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
-        // localize variables for thread safety
-        // Context
-        com.codesroots.live.presentation.map_activity.MapActivity context = mContext;
-        // listener != null
-        boolean listenerJavaLangObjectNull = false;
-        // data != null
-        boolean dataJavaLangObjectNull = false;
-        // listener
-        com.codesroots.live.helper.ClickHandler listener = mListener;
-        // data.mobile
-        java.lang.String dataMobile = null;
-        // data
-        com.codesroots.live.models.delivery.DeliveryItem data = mData;
-
-
-
-        listenerJavaLangObjectNull = (listener) != (null);
-        if (listenerJavaLangObjectNull) {
-
-
-
-            dataJavaLangObjectNull = (data) != (null);
-            if (dataJavaLangObjectNull) {
-
-
-                dataMobile = data.getMobile();
-
-
-                listener.callNumber(dataMobile, context);
-            }
-        }
-    }
     // dirty flag
     private  long mDirtyFlags = 0xffffffffffffffffL;
     /* flag mapping

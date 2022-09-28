@@ -4,9 +4,10 @@ package com.codesroots.live.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.FrameLayout;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.appcompat.widget.AppCompatImageView;
+import androidx.appcompat.widget.AppCompatButton;
 import androidx.appcompat.widget.AppCompatTextView;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.databinding.Bindable;
@@ -16,22 +17,39 @@ import com.codesroots.live.R;
 import com.codesroots.live.helper.ClickHandler;
 import com.codesroots.live.models.delivery.DeliveryItem;
 import com.codesroots.live.presentation.map_activity.MapActivity;
-import com.makeramen.roundedimageview.RoundedImageView;
+import com.google.android.material.imageview.ShapeableImageView;
+import com.google.android.material.textfield.TextInputEditText;
+import com.google.android.material.textfield.TextInputLayout;
 import java.lang.Deprecated;
 import java.lang.Object;
 
 public abstract class DeliveryItemBinding extends ViewDataBinding {
   @NonNull
-  public final AppCompatImageView call;
+  public final TextInputEditText deliveryService;
 
   @NonNull
-  public final RoundedImageView ivImage;
+  public final TextInputLayout deliveryServiceContainer;
+
+  @NonNull
+  public final ShapeableImageView ivImage;
 
   @NonNull
   public final ConstraintLayout mView;
 
   @NonNull
   public final AppCompatTextView name;
+
+  @NonNull
+  public final FrameLayout progress;
+
+  @NonNull
+  public final AppCompatButton send;
+
+  @NonNull
+  public final TextInputEditText total;
+
+  @NonNull
+  public final TextInputLayout totalContainer;
 
   @Bindable
   protected DeliveryItem mData;
@@ -43,13 +61,20 @@ public abstract class DeliveryItemBinding extends ViewDataBinding {
   protected ClickHandler mListener;
 
   protected DeliveryItemBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      AppCompatImageView call, RoundedImageView ivImage, ConstraintLayout mView,
-      AppCompatTextView name) {
+      TextInputEditText deliveryService, TextInputLayout deliveryServiceContainer,
+      ShapeableImageView ivImage, ConstraintLayout mView, AppCompatTextView name,
+      FrameLayout progress, AppCompatButton send, TextInputEditText total,
+      TextInputLayout totalContainer) {
     super(_bindingComponent, _root, _localFieldCount);
-    this.call = call;
+    this.deliveryService = deliveryService;
+    this.deliveryServiceContainer = deliveryServiceContainer;
     this.ivImage = ivImage;
     this.mView = mView;
     this.name = name;
+    this.progress = progress;
+    this.send = send;
+    this.total = total;
+    this.totalContainer = totalContainer;
   }
 
   public abstract void setData(@Nullable DeliveryItem data);

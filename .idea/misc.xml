@@ -14,6 +14,13 @@
         <entry key="..\:/LifeApp/app/src/main/res/layout/row_item_order_time.xml" value="0.67" />
         <entry key="..\:/LifeApp/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1" />
         <entry key="..\:/LifeApp/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.1" />
+        <entry key="..\:/LiveApp/app/src/main/res/drawable-ldpi/button_disabled.xml" value="0.1" />
+        <entry key="..\:/LiveApp/app/src/main/res/drawable/button_disabled.xml" value="0.1" />
+        <entry key="..\:/LiveApp/app/src/main/res/drawable/button_enabled.xml" value="0.1" />
+        <entry key="..\:/LiveApp/app/src/main/res/drawable/corner_raduis.xml" value="0.1" />
+        <entry key="..\:/LiveApp/app/src/main/res/layout/alert_dialog.xml" value="0.24259259259259258" />
+        <entry key="..\:/LiveApp/app/src/main/res/layout/delivery_item.xml" value="0.18" />
+        <entry key="..\:/LiveApp/app/src/main/res/layout/row_item_order_time.xml" value="0.25" />
         <entry key="..\:/Projects/SataDelivery/app/src/main/res/layout/activity_main.xml" value="0.27685185185185185" />
         <entry key="..\:/Projects/SataDelivery/app/src/main/res/layout/current_item.xml" value="0.13541666666666666" />
         <entry key="..\:/Projects/SataDelivery/app/src/main/res/layout/current_order_item.xml" value="0.246875" />

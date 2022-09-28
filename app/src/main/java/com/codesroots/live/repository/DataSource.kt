@@ -6,6 +6,7 @@ import com.codesroots.live.models.auth.User
 import com.codesroots.live.models.current_orders.*
 import com.codesroots.live.models.delivery.Delivery
 import com.codesroots.live.models.delivery.DeliveryItem
+import com.codesroots.live.models.ordermodel.OrderModel
 import com.satafood.core.entities.token.Token
 import okhttp3.MultipartBody
 
@@ -25,6 +26,7 @@ interface DataSource {
     suspend fun sendNotificationToDevice(loginModel: AuthModel): Response<AuthModel>
 
     suspend fun getDeliveris(deliveryItem: DeliveryItem): ArrayList<DeliveryItem>
+    suspend fun AddOrder(orderInfo: OrderModel): Response<OrderModel>
 
     suspend fun getCurrentOrders(id :Int?): CurrentOrderModel
 

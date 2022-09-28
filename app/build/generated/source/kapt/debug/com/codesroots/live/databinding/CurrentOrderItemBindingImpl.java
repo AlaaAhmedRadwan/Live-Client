@@ -24,7 +24,7 @@ public class CurrentOrderItemBindingImpl extends CurrentOrderItemBinding impleme
     private final androidx.constraintlayout.widget.ConstraintLayout mboundView0;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback4;
+    private final android.view.View.OnClickListener mCallback3;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -49,7 +49,7 @@ public class CurrentOrderItemBindingImpl extends CurrentOrderItemBinding impleme
         this.name.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback4 = new com.codesroots.live.generated.callback.OnClickListener(this, 1);
+        mCallback3 = new com.codesroots.live.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -175,7 +175,7 @@ public class CurrentOrderItemBindingImpl extends CurrentOrderItemBinding impleme
         if ((dirtyFlags & 0x8L) != 0) {
             // api target 1
 
-            this.call.setOnClickListener(mCallback4);
+            this.call.setOnClickListener(mCallback3);
         }
     }
     // Listener Stub Implementations

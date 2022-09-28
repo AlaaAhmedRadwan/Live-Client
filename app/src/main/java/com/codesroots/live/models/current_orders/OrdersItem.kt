@@ -4,6 +4,7 @@ import com.codesroots.live.models.Branches
 import com.codesroots.live.models.Drivers
 import com.codesroots.live.models.Offers
 import com.codesroots.live.models.Users
+import com.codesroots.live.models.ordermodel.OrderModel
 import java.io.Serializable
 
 
@@ -45,6 +46,6 @@ data class OrdersItem(
 
 }
 data class SetorderToDelivery(
-    var order: OrdersItem?= null,
+    var order: OrderModel?= null,
     var roomId: String? = null,
 ):Serializable

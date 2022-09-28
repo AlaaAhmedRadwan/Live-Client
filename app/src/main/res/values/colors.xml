@@ -9,6 +9,8 @@
     <color name="purple_300">#8424ad</color>
     <color name="opacityBlack">#44000000</color>
     <color name="black">#000000</color>
+    <color name="color_primary">#373149</color>
+
     <color name="white">#FFFFFFFF</color>
     <color name="selected_progress">#5EDF8E</color>
     <color name="unselected_progress_circle">#D2D2D4</color>

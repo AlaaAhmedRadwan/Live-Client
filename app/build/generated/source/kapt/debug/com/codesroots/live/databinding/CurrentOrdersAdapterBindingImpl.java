@@ -21,7 +21,7 @@ public class CurrentOrdersAdapterBindingImpl extends CurrentOrdersAdapterBinding
     // views
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback5;
+    private final android.view.View.OnClickListener mCallback4;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -47,7 +47,7 @@ public class CurrentOrdersAdapterBindingImpl extends CurrentOrdersAdapterBinding
         this.tvStatus.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback5 = new com.codesroots.live.generated.callback.OnClickListener(this, 1);
+        mCallback4 = new com.codesroots.live.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -199,7 +199,7 @@ public class CurrentOrdersAdapterBindingImpl extends CurrentOrdersAdapterBinding
         if ((dirtyFlags & 0x40L) != 0) {
             // api target 1
 
-            this.imageView.setOnClickListener(mCallback5);
+            this.imageView.setOnClickListener(mCallback4);
         }
         if ((dirtyFlags & 0x60L) != 0) {
             // api target 1

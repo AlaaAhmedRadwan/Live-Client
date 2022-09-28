@@ -6,54 +6,54 @@
 6
 7    <uses-sdk
 8        android:minSdkVersion="26"
-8-->E:\LifeApp\app\src\main\AndroidManifest.xml
+8-->E:\LiveApp\app\src\main\AndroidManifest.xml
 9        android:targetSdkVersion="30" />
-9-->E:\LifeApp\app\src\main\AndroidManifest.xml
+9-->E:\LiveApp\app\src\main\AndroidManifest.xml
 10
 11    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-11-->E:\LifeApp\app\src\main\AndroidManifest.xml:7:5-79
-11-->E:\LifeApp\app\src\main\AndroidManifest.xml:7:22-76
+11-->E:\LiveApp\app\src\main\AndroidManifest.xml:7:5-79
+11-->E:\LiveApp\app\src\main\AndroidManifest.xml:7:22-76
 12    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-12-->E:\LifeApp\app\src\main\AndroidManifest.xml:7:5-79
-12-->E:\LifeApp\app\src\main\AndroidManifest.xml:7:22-76
+12-->E:\LiveApp\app\src\main\AndroidManifest.xml:7:5-79
+12-->E:\LiveApp\app\src\main\AndroidManifest.xml:7:22-76
 13    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-13-->E:\LifeApp\app\src\main\AndroidManifest.xml:7:5-79
-13-->E:\LifeApp\app\src\main\AndroidManifest.xml:7:22-76
+13-->E:\LiveApp\app\src\main\AndroidManifest.xml:7:5-79
+13-->E:\LiveApp\app\src\main\AndroidManifest.xml:7:22-76
 14    <uses-permission android:name="android.permission.INTERNET" />
-14-->E:\LifeApp\app\src\main\AndroidManifest.xml:10:5-67
-14-->E:\LifeApp\app\src\main\AndroidManifest.xml:10:22-64
+14-->E:\LiveApp\app\src\main\AndroidManifest.xml:10:5-67
+14-->E:\LiveApp\app\src\main\AndroidManifest.xml:10:22-64
 15    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-15-->E:\LifeApp\app\src\main\AndroidManifest.xml:11:5-79
-15-->E:\LifeApp\app\src\main\AndroidManifest.xml:11:22-76
+15-->E:\LiveApp\app\src\main\AndroidManifest.xml:11:5-79
+15-->E:\LiveApp\app\src\main\AndroidManifest.xml:11:22-76
 16    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-16-->E:\LifeApp\app\src\main\AndroidManifest.xml:12:5-80
-16-->E:\LifeApp\app\src\main\AndroidManifest.xml:12:22-78
+16-->E:\LiveApp\app\src\main\AndroidManifest.xml:12:5-80
+16-->E:\LiveApp\app\src\main\AndroidManifest.xml:12:22-78
 17    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-17-->E:\LifeApp\app\src\main\AndroidManifest.xml:13:5-75
-17-->E:\LifeApp\app\src\main\AndroidManifest.xml:13:22-72
+17-->E:\LiveApp\app\src\main\AndroidManifest.xml:13:5-75
+17-->E:\LiveApp\app\src\main\AndroidManifest.xml:13:22-72
 18    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-18-->E:\LifeApp\app\src\main\AndroidManifest.xml:14:5-81
-18-->E:\LifeApp\app\src\main\AndroidManifest.xml:14:22-78
+18-->E:\LiveApp\app\src\main\AndroidManifest.xml:14:5-81
+18-->E:\LiveApp\app\src\main\AndroidManifest.xml:14:22-78
 19    <uses-permission android:name="android.permission.CAMERA" />
-19-->E:\LifeApp\app\src\main\AndroidManifest.xml:15:5-65
-19-->E:\LifeApp\app\src\main\AndroidManifest.xml:15:22-62
+19-->E:\LiveApp\app\src\main\AndroidManifest.xml:15:5-65
+19-->E:\LiveApp\app\src\main\AndroidManifest.xml:15:22-62
 20    <uses-permission android:name="android.permission.CALL_PHONE" />
-20-->E:\LifeApp\app\src\main\AndroidManifest.xml:16:5-68
-20-->E:\LifeApp\app\src\main\AndroidManifest.xml:16:22-66
+20-->E:\LiveApp\app\src\main\AndroidManifest.xml:16:5-68
+20-->E:\LiveApp\app\src\main\AndroidManifest.xml:16:22-66
 21
 22    <uses-feature
-22-->E:\LifeApp\app\src\main\AndroidManifest.xml:19:5-20:35
+22-->E:\LiveApp\app\src\main\AndroidManifest.xml:19:5-20:35
 23        android:name="android.hardware.camera"
-23-->E:\LifeApp\app\src\main\AndroidManifest.xml:19:19-57
+23-->E:\LiveApp\app\src\main\AndroidManifest.xml:19:19-57
 24        android:required="true" />
-24-->E:\LifeApp\app\src\main\AndroidManifest.xml:20:9-32
+24-->E:\LiveApp\app\src\main\AndroidManifest.xml:20:9-32
 25
 26    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
-26-->E:\LifeApp\app\src\main\AndroidManifest.xml:21:5-97
-26-->E:\LifeApp\app\src\main\AndroidManifest.xml:21:22-95
+26-->E:\LiveApp\app\src\main\AndroidManifest.xml:21:5-97
+26-->E:\LiveApp\app\src\main\AndroidManifest.xml:21:22-95
 27    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-27-->E:\LifeApp\app\src\main\AndroidManifest.xml:12:5-80
-27-->E:\LifeApp\app\src\main\AndroidManifest.xml:12:22-78
+27-->E:\LiveApp\app\src\main\AndroidManifest.xml:12:5-80
+27-->E:\LiveApp\app\src\main\AndroidManifest.xml:12:22-78
 28
 29    <queries>
 29-->[com.github.dhaval2404:imagepicker:2.1] C:\Users\hossam\.gradle\caches\transforms-3\ce27dc255ae235b5777d7460fb63623d\transformed\jetified-imagepicker-2.1\AndroidManifest.xml:9:5-19:15
@@ -115,105 +115,105 @@
 56-->[com.google.android.gms:play-services-measurement:21.0.0] C:\Users\hossam\.gradle\caches\transforms-3\935df9e659e9be3febfb3f69aa6d1b89\transformed\jetified-play-services-measurement-21.0.0\AndroidManifest.xml:26:22-107
 57
 58    <application
-58-->E:\LifeApp\app\src\main\AndroidManifest.xml:23:5-80:19
+58-->E:\LiveApp\app\src\main\AndroidManifest.xml:23:5-80:19
 59        android:name="com.codesroots.live.helper.BaseApplication"
-59-->E:\LifeApp\app\src\main\AndroidManifest.xml:31:9-66
+59-->E:\LiveApp\app\src\main\AndroidManifest.xml:31:9-66
 60        android:allowBackup="true"
-60-->E:\LifeApp\app\src\main\AndroidManifest.xml:24:9-35
+60-->E:\LiveApp\app\src\main\AndroidManifest.xml:24:9-35
 61        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
 61-->[androidx.core:core:1.6.0] C:\Users\hossam\.gradle\caches\transforms-3\d788cd2adaed3a3bd195ca2df243a270\transformed\core-1.6.0\AndroidManifest.xml:24:18-86
 62        android:debuggable="true"
 63        android:extractNativeLibs="false"
 64        android:hardwareAccelerated="true"
-64-->E:\LifeApp\app\src\main\AndroidManifest.xml:35:9-43
+64-->E:\LiveApp\app\src\main\AndroidManifest.xml:35:9-43
 65        android:icon="@mipmap/ic_launcher"
-65-->E:\LifeApp\app\src\main\AndroidManifest.xml:25:9-43
+65-->E:\LiveApp\app\src\main\AndroidManifest.xml:25:9-43
 66        android:installLocation="preferExternal"
-66-->E:\LifeApp\app\src\main\AndroidManifest.xml:29:9-49
+66-->E:\LiveApp\app\src\main\AndroidManifest.xml:29:9-49
 67        android:label="@string/app_name"
-67-->E:\LifeApp\app\src\main\AndroidManifest.xml:30:9-41
+67-->E:\LiveApp\app\src\main\AndroidManifest.xml:30:9-41
 68        android:networkSecurityConfig="@xml/network_security_config"
-68-->E:\LifeApp\app\src\main\AndroidManifest.xml:27:9-69
+68-->E:\LiveApp\app\src\main\AndroidManifest.xml:27:9-69
 69        android:requestLegacyExternalStorage="true"
-69-->E:\LifeApp\app\src\main\AndroidManifest.xml:34:9-52
+69-->E:\LiveApp\app\src\main\AndroidManifest.xml:34:9-52
 70        android:roundIcon="@mipmap/ic_launcher_round"
-70-->E:\LifeApp\app\src\main\AndroidManifest.xml:26:9-54
+70-->E:\LiveApp\app\src\main\AndroidManifest.xml:26:9-54
 71        android:supportsRtl="true"
-71-->E:\LifeApp\app\src\main\AndroidManifest.xml:36:9-35
+71-->E:\LiveApp\app\src\main\AndroidManifest.xml:36:9-35
 72        android:testOnly="true"
 73        android:theme="@style/AppTheme.NoActionBar"
-73-->E:\LifeApp\app\src\main\AndroidManifest.xml:37:9-52
+73-->E:\LiveApp\app\src\main\AndroidManifest.xml:37:9-52
 74        android:usesCleartextTraffic="true"
-74-->E:\LifeApp\app\src\main\AndroidManifest.xml:33:9-44
+74-->E:\LiveApp\app\src\main\AndroidManifest.xml:33:9-44
 75        android:windowSoftInputMode="stateVisible" >
-75-->E:\LifeApp\app\src\main\AndroidManifest.xml:32:9-51
+75-->E:\LiveApp\app\src\main\AndroidManifest.xml:32:9-51
 76        <activity
-76-->E:\LifeApp\app\src\main\AndroidManifest.xml:39:9-43:20
+76-->E:\LiveApp\app\src\main\AndroidManifest.xml:39:9-43:20
 77            android:name="com.codesroots.live.MainActivity"
-77-->E:\LifeApp\app\src\main\AndroidManifest.xml:40:13-60
+77-->E:\LiveApp\app\src\main\AndroidManifest.xml:40:13-60
 78            android:exported="true" >
-78-->E:\LifeApp\app\src\main\AndroidManifest.xml:41:13-36
+78-->E:\LiveApp\app\src\main\AndroidManifest.xml:41:13-36
 79        </activity>
 80        <activity
-80-->E:\LifeApp\app\src\main\AndroidManifest.xml:44:9-50:20
+80-->E:\LiveApp\app\src\main\AndroidManifest.xml:44:9-50:20
 81            android:name="com.codesroots.live.presentation.auth.LoginActivity"
-81-->E:\LifeApp\app\src\main\AndroidManifest.xml:45:13-79
+81-->E:\LiveApp\app\src\main\AndroidManifest.xml:45:13-79
 82            android:exported="true"
-82-->E:\LifeApp\app\src\main\AndroidManifest.xml:46:13-36
+82-->E:\LiveApp\app\src\main\AndroidManifest.xml:46:13-36
 83            android:screenOrientation="sensorPortrait" >
-83-->E:\LifeApp\app\src\main\AndroidManifest.xml:47:13-55
+83-->E:\LiveApp\app\src\main\AndroidManifest.xml:47:13-55
 84        </activity>
 85        <activity
-85-->E:\LifeApp\app\src\main\AndroidManifest.xml:51:9-57:20
+85-->E:\LiveApp\app\src\main\AndroidManifest.xml:51:9-57:20
 86            android:name="com.codesroots.live.presentation.map_activity.MapActivity"
-86-->E:\LifeApp\app\src\main\AndroidManifest.xml:52:13-85
+86-->E:\LiveApp\app\src\main\AndroidManifest.xml:52:13-85
 87            android:exported="true"
-87-->E:\LifeApp\app\src\main\AndroidManifest.xml:53:13-36
+87-->E:\LiveApp\app\src\main\AndroidManifest.xml:53:13-36
 88            android:screenOrientation="sensorPortrait" >
-88-->E:\LifeApp\app\src\main\AndroidManifest.xml:54:13-55
+88-->E:\LiveApp\app\src\main\AndroidManifest.xml:54:13-55
 89        </activity>
 90        <activity
-90-->E:\LifeApp\app\src\main\AndroidManifest.xml:58:9-66:20
+90-->E:\LiveApp\app\src\main\AndroidManifest.xml:58:9-66:20
 91            android:name="com.codesroots.live.presentation.splashScreen.SplashScreen"
-91-->E:\LifeApp\app\src\main\AndroidManifest.xml:59:13-86
+91-->E:\LiveApp\app\src\main\AndroidManifest.xml:59:13-86
 92            android:exported="true" >
-92-->E:\LifeApp\app\src\main\AndroidManifest.xml:60:13-36
+92-->E:\LiveApp\app\src\main\AndroidManifest.xml:60:13-36
 93            <intent-filter>
-93-->E:\LifeApp\app\src\main\AndroidManifest.xml:61:13-65:29
+93-->E:\LiveApp\app\src\main\AndroidManifest.xml:61:13-65:29
 94                <action android:name="android.intent.action.MAIN" />
-94-->E:\LifeApp\app\src\main\AndroidManifest.xml:62:17-69
-94-->E:\LifeApp\app\src\main\AndroidManifest.xml:62:25-66
+94-->E:\LiveApp\app\src\main\AndroidManifest.xml:62:17-69
+94-->E:\LiveApp\app\src\main\AndroidManifest.xml:62:25-66
 95
 96                <category android:name="android.intent.category.LAUNCHER" />
-96-->E:\LifeApp\app\src\main\AndroidManifest.xml:64:17-77
-96-->E:\LifeApp\app\src\main\AndroidManifest.xml:64:27-74
+96-->E:\LiveApp\app\src\main\AndroidManifest.xml:64:17-77
+96-->E:\LiveApp\app\src\main\AndroidManifest.xml:64:27-74
 97            </intent-filter>
 98        </activity>
 99
 100        <meta-data
-100-->E:\LifeApp\app\src\main\AndroidManifest.xml:67:9-68:69
+100-->E:\LiveApp\app\src\main\AndroidManifest.xml:67:9-68:69
 101            android:name="com.google.android.gms.version"
-101-->E:\LifeApp\app\src\main\AndroidManifest.xml:67:20-65
+101-->E:\LiveApp\app\src\main\AndroidManifest.xml:67:20-65
 102            android:value="@integer/google_play_services_version" />
-102-->E:\LifeApp\app\src\main\AndroidManifest.xml:68:13-66
+102-->E:\LiveApp\app\src\main\AndroidManifest.xml:68:13-66
 103        <meta-data
-103-->E:\LifeApp\app\src\main\AndroidManifest.xml:69:9-71:71
+103-->E:\LiveApp\app\src\main\AndroidManifest.xml:69:9-71:71
 104            android:name="com.google.android.geo.API_KEY"
-104-->E:\LifeApp\app\src\main\AndroidManifest.xml:70:13-58
+104-->E:\LiveApp\app\src\main\AndroidManifest.xml:70:13-58
 105            android:value="AIzaSyBPbKk2PFR_lmGvyNzYyqACyEIZPvirNzE" />
-105-->E:\LifeApp\app\src\main\AndroidManifest.xml:71:13-68
+105-->E:\LiveApp\app\src\main\AndroidManifest.xml:71:13-68
 106
 107        <service
-107-->E:\LifeApp\app\src\main\AndroidManifest.xml:73:9-79:19
+107-->E:\LiveApp\app\src\main\AndroidManifest.xml:73:9-79:19
 108            android:name="com.codesroots.live.datalayer.PushNotificationService"
-108-->E:\LifeApp\app\src\main\AndroidManifest.xml:74:13-81
+108-->E:\LiveApp\app\src\main\AndroidManifest.xml:74:13-81
 109            android:exported="false" >
-109-->E:\LifeApp\app\src\main\AndroidManifest.xml:75:13-37
+109-->E:\LiveApp\app\src\main\AndroidManifest.xml:75:13-37
 110            <intent-filter>
-110-->E:\LifeApp\app\src\main\AndroidManifest.xml:76:13-78:29
+110-->E:\LiveApp\app\src\main\AndroidManifest.xml:76:13-78:29
 111                <action android:name="com.google.firebase.MESSAGING_EVENT" />
-111-->E:\LifeApp\app\src\main\AndroidManifest.xml:77:17-78
-111-->E:\LifeApp\app\src\main\AndroidManifest.xml:77:25-75
+111-->E:\LiveApp\app\src\main\AndroidManifest.xml:77:17-78
+111-->E:\LiveApp\app\src\main\AndroidManifest.xml:77:25-75
 112            </intent-filter>
 113        </service>
 114
@@ -402,10 +402,10 @@
 212            android:exported="false" >
 212-->[com.google.firebase:firebase-messaging:23.0.6] C:\Users\hossam\.gradle\caches\transforms-3\8434836370b639db13ca894d960b5d8d\transformed\jetified-firebase-messaging-23.0.6\AndroidManifest.xml:48:13-37
 213            <intent-filter android:priority="-500" >
-213-->E:\LifeApp\app\src\main\AndroidManifest.xml:76:13-78:29
+213-->E:\LiveApp\app\src\main\AndroidManifest.xml:76:13-78:29
 214                <action android:name="com.google.firebase.MESSAGING_EVENT" />
-214-->E:\LifeApp\app\src\main\AndroidManifest.xml:77:17-78
-214-->E:\LifeApp\app\src\main\AndroidManifest.xml:77:25-75
+214-->E:\LiveApp\app\src\main\AndroidManifest.xml:77:17-78
+214-->E:\LiveApp\app\src\main\AndroidManifest.xml:77:25-75
 215            </intent-filter>
 216        </service>
 217

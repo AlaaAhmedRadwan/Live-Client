@@ -8,6 +8,7 @@ import com.codesroots.live.models.current_orders.*
 
 import com.codesroots.live.models.delivery.Delivery
 import com.codesroots.live.models.delivery.DeliveryItem
+import com.codesroots.live.models.ordermodel.OrderModel
 import com.satafood.core.entities.token.Token
 import okhttp3.MultipartBody
 import retrofit2.Response
@@ -33,6 +34,10 @@ interface APIServices {
     suspend fun sendNotificationToDevice(@Body user: AuthModel?): Response<AuthModel>
 
 
+    ////////////// make order
+    @POST("Orders/add")
+    @Headers("Accept: Application/json", "cache-control: no-cache")
+    suspend fun AddOrder(@Body orderModel: OrderModel?): Response<OrderModel>
 
 
     //delivers/GetDliveryOrders

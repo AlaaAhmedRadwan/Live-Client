@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "E:\\LifeApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-sw630dp-v13\\values-sw630dp-v13.xml",
+            "outputFile": "E:\\LiveApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-sw630dp-v13\\values-sw630dp-v13.xml",
             "map": [
                 {
                     "source": "C:\\Users\\hossam\\.gradle\\caches\\transforms-3\\92635251c88180ab3cb5f3300bfc0e6a\\transformed\\jetified-sdp-android-1.0.6\\res\\values-sw630dp-v13\\values-sw630dp-v13.xml",

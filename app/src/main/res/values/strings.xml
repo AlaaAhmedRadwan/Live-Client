@@ -1,10 +1,15 @@
 <resources>
     <string name="app_name">Live</string>
-    <string name="confirm">قبول</string>
+    <string name="confirm">تاكيد الطلب ؟</string>
     <string name="cancel">رفض</string>
     <string name="cancel2">تم رفض الطلب</string>
     <string name="cancel3">الغاء</string>
     <string name="name">الاسم </string>
+    <string name="validTotal">من فضلك ادخل المبلغ</string>
+    <string name="validDelivery">من فضلك ادخل قيمة الشحن</string>
+    <string name="invalidPassword">كلمة مرور 8 أحرف على الأقل</string>
+    <string name="invalidPassword2">يجب أن يحتوي على حرف واحد كبير</string>
+    <string name="invalidPassword3">يجب ان تحتوي علي حرف واحد (@#$%^+=)</string>
     <string name="address">مساكن شيراتون الحي الثامن مدينة نصر</string>
     <string name="details">تفاصيل الطلب</string>
     <string name="report">ابلاغ عن مشكلة</string>
@@ -18,7 +23,7 @@
     <string name="orderNumberText"> رقم الطلب : </string>
     <string name="paymentWayText">طريقة الدفع : </string>
     <string name="deliveryTimeText">وقت التسليم : </string>
-    <string name="totalText">الإجمالي  : </string>
+    <string name="totalText">الإجمالي </string>
     <string name="startTime">من</string>
     <string name="endTime">إلي</string>
     <string name="close">اغلاق</string>
@@ -35,7 +40,7 @@
     <string name="menu_slideshow">Slideshow</string>
     <string name="menu_tools">Tools</string>
     <string name="menu_share">Share</string>
-    <string name="menu_send">Send</string>
+    <string name="menu_send">ارسال</string>
     <string name="currentOrders">طلباتي</string>
     <string name="dailyOrders">طلبات اليوم</string>
     <string name="archiveOrders">أرشيف الطلبات</string>
@@ -71,4 +76,5 @@
     <string name="total_without_delivery_fees">الاجمالي بدون خدمة التوصيل</string>
     <string name="splash_image_view">splash image view</string>
     <string name="profile_personal">الملف الشخصي</string>
+    <string name="sendToDelivery">سيتم ارسال طلبك الان الي اقرب مندوب..</string>
 </resources>

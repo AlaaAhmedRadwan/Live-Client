@@ -9,6 +9,7 @@ import com.codesroots.live.models.current_orders.OrderStatus
 import com.codesroots.live.models.current_orders.OrdersItem
 import com.codesroots.live.models.delivery.Delivery
 import com.codesroots.live.models.delivery.DeliveryItem
+import com.codesroots.live.models.ordermodel.OrderModel
 import com.codesroots.live.repository.DataRepo
 import com.codesroots.live.repository.RemoteDataSource
 import com.satafood.core.entities.token.Token
@@ -46,20 +47,16 @@ class CurrentOrderViewModel @Inject constructor(private val DateRepoCompnay: Dat
 
     var authLD: MutableLiveData<AuthModel>? = null
 
+    var OrderInfoLD : MutableLiveData<OrderModel>? = null
 
-    protected val getStatusState : MutableStateFlow<DeliveryItem>? = null
 
-    val deliveryState: MutableStateFlow<DeliveryItem>? get() = getStatusState
-
-    protected val getDeliveriesData : MutableStateFlow<ArrayList<DeliveryItem>>? = null
-
-    val deliveriesState: MutableStateFlow<ArrayList<DeliveryItem>>? get() = getDeliveriesData
 
     init {
          getIntent()
         mclientLatitude = MutableLiveData()
         mclientLatitude = MutableLiveData()
         deliveryItemLD = MutableLiveData()
+        OrderInfoLD= MutableLiveData()
         OrderStateLD = MutableLiveData()
         deliveriesDataLD = MutableLiveData()
         authLD = MutableLiveData()
@@ -103,7 +100,20 @@ class CurrentOrderViewModel @Inject constructor(private val DateRepoCompnay: Dat
         }
 
     }
+    fun addOrder(orderInfo: OrderModel?) {
+        job = CoroutineScope(Dispatchers.IO).launch {
+            val response = Datasources.AddOrder(orderInfo!!)
+            withContext(Dispatchers.Main+coroutineExceptionHandler) {
+                if (response.isSuccessful) {
+                    OrderInfoLD?.postValue(response.body())
 
+                } else {
+                    onError("Error : ${response.message()} ")
+                }
+            }
+        }
+
+    }
     fun updateUserToken(userId: Int, token: Token) {
         job = CoroutineScope(Dispatchers.IO+coroutineExceptionHandler).launch {
             val response = DateRepoCompnay.updateUserToken(userId,token)

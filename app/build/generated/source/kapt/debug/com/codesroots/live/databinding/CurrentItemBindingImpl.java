@@ -25,7 +25,7 @@ public class CurrentItemBindingImpl extends CurrentItemBinding implements com.co
     // views
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback3;
+    private final android.view.View.OnClickListener mCallback2;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -61,7 +61,7 @@ public class CurrentItemBindingImpl extends CurrentItemBinding implements com.co
         this.price.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback3 = new com.codesroots.live.generated.callback.OnClickListener(this, 1);
+        mCallback2 = new com.codesroots.live.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -240,7 +240,7 @@ public class CurrentItemBindingImpl extends CurrentItemBinding implements com.co
         if ((dirtyFlags & 0x8L) != 0) {
             // api target 1
 
-            this.call.setOnClickListener(mCallback3);
+            this.call.setOnClickListener(mCallback2);
         }
     }
     // Listener Stub Implementations

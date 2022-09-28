@@ -70,11 +70,9 @@ class LoginActivity : AppCompatActivity() {
             } else {
 
                 pref.UserToken = it.token
-                pref.code = it.user!!.branches!!.code
-                pref.VendorId = it.user!!.branches?.id
                 pref.restaurantName = it.user!!.branches?.name
-                pref.userPhone = it.user!!.branches?.phone
-                pref.userId = it.user!!.id!!
+                pref.room_id = it.user!!.room_id
+                pref.userId = it.user!!.branches?.id!!
                 pref.restaurantLat = it.user!!.branches?.latitude.toString()
                 pref.restaurantLong = it.user!!.branches?.longitude.toString()
 
