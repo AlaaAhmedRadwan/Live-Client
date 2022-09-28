@@ -106,7 +106,7 @@ class DeliveriesAdapter(
 
     }
 
-    fun sendSocket() {
+    private fun sendSocket() {
         val gson = Gson()
         val gsonPretty = GsonBuilder().setPrettyPrinting().create()
         val socketObject =
@@ -125,7 +125,7 @@ class DeliveriesAdapter(
         frag.view.progress.isVisible = true
 
     }
-   fun dialog(){
+    private fun dialog(){
        val pDialog = Dialog(context)
        pDialog.getWindow()?.requestFeature(Window.FEATURE_ACTION_BAR);
        pDialog.setContentView(context.layoutInflater.inflate(R.layout.alert_dialog, null)
@@ -141,7 +141,7 @@ class DeliveriesAdapter(
        pDialog.show();
    }
 
-    fun addOrder(p0: CustomViewHolders){
+    private  fun addOrder(p0: CustomViewHolders){
         val orderModel = OrderModel(branch_id = 125,
             total = p0.binding.total.text.toString().toDouble(),
             delivery_serivce = p0.binding.total.text.toString().toInt())
