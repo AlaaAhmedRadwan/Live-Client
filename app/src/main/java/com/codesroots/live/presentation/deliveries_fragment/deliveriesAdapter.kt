@@ -68,14 +68,14 @@ class DeliveriesAdapter(
 //                "لديك طلب جديد يحتاج التوصيل")
 //                if(itemClickable) {
                 try {
-                frag.viewModel.OrderInfoLD!!.observe(frag.requireActivity(), Observer {model->
-               if (model!=null)
-                   p0.binding.progress.isVisible = false
-                    orderData =  model
-                   dialog()
+                    frag.viewModel.OrderInfoLD!!.observe(frag.requireActivity(), Observer {model->
+                        if (model!=null)
+                            p0.binding.progress.isVisible = false
+                        orderData =  model
+                        dialog()
 
-                })
-            } catch (e: Exception) {}
+                    })
+                } catch (e: Exception) {}
             }
 
 
@@ -107,17 +107,18 @@ class DeliveriesAdapter(
     }
 
     private fun sendSocket() {
+
         val gson = Gson()
         val gsonPretty = GsonBuilder().setPrettyPrinting().create()
         val socketObject =
-            SetorderToDelivery(orderData, (context as MapActivity).Pref.room_id)
+            SetorderToDelivery(orderData, data[index].room_id!!)
         val jsonTut: String = gson.toJson(socketObject)
         println(jsonTut)
         val jsonTutPretty: String = gsonPretty.toJson(socketObject)
         println(jsonTutPretty)
+
         (context as MapActivity).mSocket?.emit("CreateDeliveryOrder", jsonTutPretty)
-        (context as MapActivity).mSocket?.emit("CreateDeliveryRoom",
-            (context as MapActivity).Pref.room_id)
+
         val user_id = data[index].user?.id!!
         Log.d("TAG", "socket// $user_id")
         Log.d("TAG", "socket// $jsonTutPretty")
@@ -126,25 +127,27 @@ class DeliveriesAdapter(
 
     }
     private fun dialog(){
-       val pDialog = Dialog(context)
-       pDialog.getWindow()?.requestFeature(Window.FEATURE_ACTION_BAR);
-       pDialog.setContentView(context.layoutInflater.inflate(R.layout.alert_dialog, null)
-       );
-       pDialog.done.setOnClickListener {
-           sendSocket()
-           pDialog.hide()
+        (context as MapActivity).mSocket?.emit("CreateDeliveryRoom",
+            data[index].room_id!!)
+        val pDialog = Dialog(context)
+        pDialog.getWindow()?.requestFeature(Window.FEATURE_ACTION_BAR);
+        pDialog.setContentView(context.layoutInflater.inflate(R.layout.alert_dialog, null)
+        );
+        pDialog.done.setOnClickListener {
+            sendSocket()
+            pDialog.hide()
 
-       }
-       pDialog.cancel.setOnClickListener {
-           pDialog.hide()
-       }
-       pDialog.show();
-   }
+        }
+        pDialog.cancel.setOnClickListener {
+            pDialog.hide()
+        }
+        pDialog.show();
+    }
 
     private  fun addOrder(p0: CustomViewHolders){
-        val orderModel = OrderModel(branch_id = 125,
+        val orderModel = OrderModel(branch_id = data[0].branch_id,
             total = p0.binding.total.text.toString().toDouble(),
-            delivery_serivce = p0.binding.total.text.toString().toInt())
+            delivery_serivce = p0.binding.deliveryService.text.toString().toInt())
 
         frag.viewModel.addOrder(orderModel)
     }
@@ -179,4 +182,3 @@ class DeliveriesAdapter(
 
 
 }
-

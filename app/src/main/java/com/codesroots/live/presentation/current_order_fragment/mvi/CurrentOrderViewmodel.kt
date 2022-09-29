@@ -69,7 +69,6 @@ class CurrentOrderViewModel @Inject constructor(private val DateRepoCompnay: Dat
         job = viewModelScope.launch() {
             uiState.value = MainViewState().copy(progress = true)
             uiState.value = MainViewState().copy(noOrderYet = true)
-
             intents.receiveAsFlow().collect {
                 uiState.value = (mapIntentToViewState(it, DateRepoCompnay))
             }

@@ -20,6 +20,7 @@ import androidx.core.view.isVisible
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModelProvider
 import com.codesroots.live.databinding.DeliveriesFragmentBinding
+import com.codesroots.live.helper.PreferenceHelper
 import com.codesroots.live.helper.WARN_MotionToast
 import com.codesroots.live.models.current_orders.OrdersItem
 import com.codesroots.live.models.delivery.DeliveryItem
@@ -39,7 +40,8 @@ class DeliveriesFragment @Inject constructor() : DialogFragment() {
     val viewModel by viewModels<CurrentOrderViewModel> { viewModelFactory }
     var data = OrdersItem()
     lateinit var deliveriesAdapter: DeliveriesAdapter
-
+    @Inject
+    lateinit var pref: PreferenceHelper
     lateinit var view: DeliveriesFragmentBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -67,7 +69,7 @@ class DeliveriesFragment @Inject constructor() : DialogFragment() {
         dialog!!.setCanceledOnTouchOutside(true);
 
 
-        val data = DeliveryItem(branch_id = data.branch_id, admivstrative_area_2 = "ChIJm5OFqK01WBQRGxd4QF0x30Y", admivstrative_area_3 = "ChIJw-sCFZZHWBQR0DOg7Az19FA")
+        val data = DeliveryItem(branch_id = data.branch_id, admivstrative_area_2 = pref.placeId_2, admivstrative_area_3 = pref.placeId_3,)
 
         viewModel.getDeliveris(data)
 

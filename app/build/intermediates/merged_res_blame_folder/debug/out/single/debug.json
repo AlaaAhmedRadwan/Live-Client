@@ -108,12 +108,12 @@
         "source": "E:\\LiveApp\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
     },
     {
-        "merged": "E:\\LiveApp\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_splash.xml.flat",
-        "source": "E:\\LiveApp\\app\\src\\main\\res\\layout\\activity_splash.xml"
-    },
-    {
         "merged": "E:\\LiveApp\\app\\build\\intermediates\\merged_res\\debug\\layout_bottom_dialog.xml.flat",
         "source": "E:\\LiveApp\\app\\src\\main\\res\\layout\\bottom_dialog.xml"
+    },
+    {
+        "merged": "E:\\LiveApp\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_splash.xml.flat",
+        "source": "E:\\LiveApp\\app\\src\\main\\res\\layout\\activity_splash.xml"
     },
     {
         "merged": "E:\\LiveApp\\app\\build\\intermediates\\merged_res\\debug\\drawable_telephone.png.flat",

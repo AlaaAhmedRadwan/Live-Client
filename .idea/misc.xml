@@ -20,7 +20,9 @@
         <entry key="..\:/LiveApp/app/src/main/res/drawable/corner_raduis.xml" value="0.1" />
         <entry key="..\:/LiveApp/app/src/main/res/layout/alert_dialog.xml" value="0.24259259259259258" />
         <entry key="..\:/LiveApp/app/src/main/res/layout/delivery_item.xml" value="0.18" />
+        <entry key="..\:/LiveApp/app/src/main/res/layout/delivery_login_fragment.xml" value="0.11770833333333333" />
         <entry key="..\:/LiveApp/app/src/main/res/layout/row_item_order_time.xml" value="0.25" />
+        <entry key="..\:/LiveApp/app/src/main/res/menu/activity_main_drawer.xml" value="0.67" />
         <entry key="..\:/Projects/SataDelivery/app/src/main/res/layout/activity_main.xml" value="0.27685185185185185" />
         <entry key="..\:/Projects/SataDelivery/app/src/main/res/layout/current_item.xml" value="0.13541666666666666" />
         <entry key="..\:/Projects/SataDelivery/app/src/main/res/layout/current_order_item.xml" value="0.246875" />

@@ -24,6 +24,22 @@ class PreferenceHelper(context: Context) {
             edit.putString("longitude", longitude)
             edit.apply()
         }
+    var  placeId_3: String?
+        get() = app_prefs!!.getString("placeId_3", "")
+        set(placeId_3) {
+            val edit = app_prefs!!.edit()
+
+            edit.putString("placeId_3", placeId_3)
+            edit.apply()
+        }
+
+    var placeId_2: String?
+        get() = app_prefs!!.getString("placeId_2", "")
+        set(placeId_2) {
+            val edit = app_prefs!!.edit()
+            edit.putString("placeId_2", placeId_2)
+            edit.apply()
+        }
 
 
 

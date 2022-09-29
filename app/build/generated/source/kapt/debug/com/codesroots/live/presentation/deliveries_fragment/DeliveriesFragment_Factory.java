@@ -2,6 +2,7 @@
 package com.codesroots.live.presentation.deliveries_fragment;
 
 import androidx.lifecycle.ViewModelProvider;
+import com.codesroots.live.helper.PreferenceHelper;
 import dagger.internal.DaggerGenerated;
 import dagger.internal.Factory;
 import javax.inject.Provider;
@@ -14,20 +15,26 @@ import javax.inject.Provider;
 public final class DeliveriesFragment_Factory implements Factory<DeliveriesFragment> {
   private final Provider<ViewModelProvider.Factory> viewModelFactoryProvider;
 
-  public DeliveriesFragment_Factory(Provider<ViewModelProvider.Factory> viewModelFactoryProvider) {
+  private final Provider<PreferenceHelper> prefProvider;
+
+  public DeliveriesFragment_Factory(Provider<ViewModelProvider.Factory> viewModelFactoryProvider,
+      Provider<PreferenceHelper> prefProvider) {
     this.viewModelFactoryProvider = viewModelFactoryProvider;
+    this.prefProvider = prefProvider;
   }
 
   @Override
   public DeliveriesFragment get() {
     DeliveriesFragment instance = newInstance();
     DeliveriesFragment_MembersInjector.injectViewModelFactory(instance, viewModelFactoryProvider.get());
+    DeliveriesFragment_MembersInjector.injectPref(instance, prefProvider.get());
     return instance;
   }
 
   public static DeliveriesFragment_Factory create(
-      Provider<ViewModelProvider.Factory> viewModelFactoryProvider) {
-    return new DeliveriesFragment_Factory(viewModelFactoryProvider);
+      Provider<ViewModelProvider.Factory> viewModelFactoryProvider,
+      Provider<PreferenceHelper> prefProvider) {
+    return new DeliveriesFragment_Factory(viewModelFactoryProvider, prefProvider);
   }
 
   public static DeliveriesFragment newInstance() {

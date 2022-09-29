@@ -13,19 +13,22 @@
         <item
             android:id="@+id/dailyOrder"
             android:title="@string/dailyOrders"
-
+            android:visible="false"
             />
         <item
             android:id="@+id/archiveOrders"
-            android:title="@string/archiveOrders" />
+            android:title="@string/archiveOrders"
+            android:visible="false"/>
         <item
             android:id="@+id/current_orders"
-            android:title="@string/currentOrders" />
+            android:title="@string/currentOrders"
+
+            />
 
         <item
             android:id="@+id/profile"
             android:title="@string/profile_personal"
-
+            android:visible="false"
             />
 
         <item

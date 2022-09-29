@@ -84,21 +84,17 @@ class NewOrderFragment @Inject constructor(
 
         view.confirmButton.setOnClickListener {
             showOrderTimesDialog(context as MapActivity)
-
             //connecting socket
             val confirmData = JSONObject()
             confirmData.put("order_information", 1)
             confirmData.put("code", pref.code)
             mSocket?.emit("SendTestOrder", confirmData)
-
             dismiss()
-
         }
 
         view.cancelButton.setOnClickListener {
             Error_MotionToast(requireActivity().getString(R.string.cancel2),
                 requireActivity())
-
             val confirmData = JSONObject()
             confirmData.put("order_information", 0)
             confirmData.put("code", pref.code)
@@ -157,7 +153,6 @@ class NewOrderFragment @Inject constructor(
     fun cancelRequest() {
         val cancelInfo = OrderStatus(
             order_status_id = 5 , id = item.id)
-
         viewModel.changeOrderStatus(item.id!!,cancelInfo)
 
     }

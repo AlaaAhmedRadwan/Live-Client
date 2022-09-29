@@ -2,6 +2,7 @@
 package com.codesroots.live.presentation.deliveries_fragment;
 
 import androidx.lifecycle.ViewModelProvider;
+import com.codesroots.live.helper.PreferenceHelper;
 import dagger.MembersInjector;
 import dagger.internal.DaggerGenerated;
 import dagger.internal.InjectedFieldSignature;
@@ -15,24 +16,35 @@ import javax.inject.Provider;
 public final class DeliveriesFragment_MembersInjector implements MembersInjector<DeliveriesFragment> {
   private final Provider<ViewModelProvider.Factory> viewModelFactoryProvider;
 
+  private final Provider<PreferenceHelper> prefProvider;
+
   public DeliveriesFragment_MembersInjector(
-      Provider<ViewModelProvider.Factory> viewModelFactoryProvider) {
+      Provider<ViewModelProvider.Factory> viewModelFactoryProvider,
+      Provider<PreferenceHelper> prefProvider) {
     this.viewModelFactoryProvider = viewModelFactoryProvider;
+    this.prefProvider = prefProvider;
   }
 
   public static MembersInjector<DeliveriesFragment> create(
-      Provider<ViewModelProvider.Factory> viewModelFactoryProvider) {
-    return new DeliveriesFragment_MembersInjector(viewModelFactoryProvider);
+      Provider<ViewModelProvider.Factory> viewModelFactoryProvider,
+      Provider<PreferenceHelper> prefProvider) {
+    return new DeliveriesFragment_MembersInjector(viewModelFactoryProvider, prefProvider);
   }
 
   @Override
   public void injectMembers(DeliveriesFragment instance) {
     injectViewModelFactory(instance, viewModelFactoryProvider.get());
+    injectPref(instance, prefProvider.get());
   }
 
   @InjectedFieldSignature("com.codesroots.live.presentation.deliveries_fragment.DeliveriesFragment.viewModelFactory")
   public static void injectViewModelFactory(DeliveriesFragment instance,
       ViewModelProvider.Factory viewModelFactory) {
     instance.viewModelFactory = viewModelFactory;
+  }
+
+  @InjectedFieldSignature("com.codesroots.live.presentation.deliveries_fragment.DeliveriesFragment.pref")
+  public static void injectPref(DeliveriesFragment instance, PreferenceHelper pref) {
+    instance.pref = pref;
   }
 }

@@ -1,35 +1,32 @@
 com/codesroots/live/di/SocketModule_ProvideSocketFactory.java
  com.codesroots.live.di.SocketModule_ProvideSocketFactory
-com/codesroots/live/presentation/current_order_fragment/mvi/CurrentOrderViewModel_Factory.java
- com.codesroots.live.presentation.current_order_fragment.mvi.CurrentOrderViewModel_Factory
-com/codesroots/live/helper/FileUtils.java
- com.codesroots.live.helper.FileUtils
- com.codesroots.live.helper.FileUtils$1
- com.codesroots.live.helper.FileUtils$2
- com.codesroots.live.helper.FileUtils$3
+com/codesroots/live/presentation/history_order_fragment/mvi/HistoryOrderViewmodel_Factory.java
+ com.codesroots.live.presentation.history_order_fragment.mvi.HistoryOrderViewmodel_Factory
+com/codesroots/live/BuildConfig.java
+ com.codesroots.live.BuildConfig
 androidx/databinding/DataBindingComponent.java
  androidx.databinding.DataBindingComponent
-com/codesroots/live/di/DispatcherModule_ProvidesIoDispatcherFactory.java
- com.codesroots.live.di.DispatcherModule_ProvidesIoDispatcherFactory
- com.codesroots.live.di.DispatcherModule_ProvidesIoDispatcherFactory$InstanceHolder
+com/codesroots/live/databinding/RowItemOrderTimeBindingImpl.java
+ com.codesroots.live.databinding.RowItemOrderTimeBindingImpl
 com/codesroots/live/repository/DataRepo_Factory.java
  com.codesroots.live.repository.DataRepo_Factory
-com/codesroots/live/databinding/LayoutDialogOrderTimeBinding.java
- com.codesroots.live.databinding.LayoutDialogOrderTimeBinding
+com/codesroots/live/BR.java
+ com.codesroots.live.BR
 com/codesroots/live/presentation/profile_fragment/viewmodel/ProfileViewmodel_Factory.java
  com.codesroots.live.presentation.profile_fragment.viewmodel.ProfileViewmodel_Factory
 androidx/databinding/DataBinderMapperImpl.java
  androidx.databinding.DataBinderMapperImpl
 androidx/databinding/library/baseAdapters/BR.java
  androidx.databinding.library.baseAdapters.BR
-com/codesroots/live/repository/RemoteDataSource_Factory.java
- com.codesroots.live.repository.RemoteDataSource_Factory
+com/codesroots/live/di/DispatcherModule_ProvidesIoDispatcherFactory.java
+ com.codesroots.live.di.DispatcherModule_ProvidesIoDispatcherFactory
+ com.codesroots.live.di.DispatcherModule_ProvidesIoDispatcherFactory$InstanceHolder
 com/codesroots/live/databinding/LayoutDialogOrderTimeBindingImpl.java
  com.codesroots.live.databinding.LayoutDialogOrderTimeBindingImpl
-com/codesroots/live/presentation/auth/AuthViewModel_Factory.java
- com.codesroots.live.presentation.auth.AuthViewModel_Factory
-com/codesroots/live/presentation/history_order_fragment/mvi/HistoryOrderViewmodel_Factory.java
- com.codesroots.live.presentation.history_order_fragment.mvi.HistoryOrderViewmodel_Factory
+com/codesroots/live/databinding/LayoutDialogOrderTimeBinding.java
+ com.codesroots.live.databinding.LayoutDialogOrderTimeBinding
+com/codesroots/live/presentation/current_order_fragment/mvi/CurrentOrderViewModel_Factory.java
+ com.codesroots.live.presentation.current_order_fragment.mvi.CurrentOrderViewModel_Factory
 com/codesroots/live/di/UnsafeOkHttpClient.java
  com.codesroots.live.di.UnsafeOkHttpClient
  com.codesroots.live.di.UnsafeOkHttpClient$1
@@ -37,8 +34,8 @@ com/codesroots/live/di/UnsafeOkHttpClient.java
 com/codesroots/live/di/DispatcherModule_ProvidesMainDispatcherFactory.java
  com.codesroots.live.di.DispatcherModule_ProvidesMainDispatcherFactory
  com.codesroots.live.di.DispatcherModule_ProvidesMainDispatcherFactory$InstanceHolder
-com/codesroots/live/di/AppModule_ProvideTasksBranchDataSourceFactory.java
- com.codesroots.live.di.AppModule_ProvideTasksBranchDataSourceFactory
+com/codesroots/live/repository/RemoteDataSource_Factory.java
+ com.codesroots.live.repository.RemoteDataSource_Factory
 com/codesroots/live/databinding/RowItemOrderTimeBinding.java
  com.codesroots.live.databinding.RowItemOrderTimeBinding
 com/codesroots/live/di/DispatcherModule_ProvidesDefaultDispatcherFactory.java
@@ -46,14 +43,17 @@ com/codesroots/live/di/DispatcherModule_ProvidesDefaultDispatcherFactory.java
  com.codesroots.live.di.DispatcherModule_ProvidesDefaultDispatcherFactory$InstanceHolder
 com/codesroots/live/databinding/DeliveryLoginFragmentBinding.java
  com.codesroots.live.databinding.DeliveryLoginFragmentBinding
-com/codesroots/live/BR.java
- com.codesroots.live.BR
+com/codesroots/live/helper/FileUtils.java
+ com.codesroots.live.helper.FileUtils
+ com.codesroots.live.helper.FileUtils$1
+ com.codesroots.live.helper.FileUtils$2
+ com.codesroots.live.helper.FileUtils$3
 com/codesroots/live/DataBindingTriggerClass.java
  com.codesroots.live.DataBindingTriggerClass
 com/codesroots/live/helper/ViewModelFactory_Factory.java
  com.codesroots.live.helper.ViewModelFactory_Factory
-com/codesroots/live/di/AppModule_ProvideSweetAlertDialogFactory.java
- com.codesroots.live.di.AppModule_ProvideSweetAlertDialogFactory
+com/codesroots/live/databinding/DeliveryLoginFragmentBindingImpl.java
+ com.codesroots.live.databinding.DeliveryLoginFragmentBindingImpl
 com/codesroots/live/generated/callback/OnClickListener.java
  com.codesroots.live.generated.callback.OnClickListener
  com.codesroots.live.generated.callback.OnClickListener$Listener
@@ -61,31 +61,31 @@ com/codesroots/live/DataBinderMapperImpl.java
  com.codesroots.live.DataBinderMapperImpl
  com.codesroots.live.DataBinderMapperImpl$InnerBrLookup
  com.codesroots.live.DataBinderMapperImpl$InnerLayoutIdLookup
-com/codesroots/live/di/APIModule_ProvideConverterFactoryFactory.java
- com.codesroots.live.di.APIModule_ProvideConverterFactoryFactory
+com/codesroots/live/helper/LocalStorageProvider.java
+ com.codesroots.live.helper.LocalStorageProvider
 com/codesroots/live/helper/MyFragmentFactory_Factory.java
  com.codesroots.live.helper.MyFragmentFactory_Factory
 com/codesroots/live/di/CoroutinesDispatcherProvider_Factory.java
  com.codesroots.live.di.CoroutinesDispatcherProvider_Factory
  com.codesroots.live.di.CoroutinesDispatcherProvider_Factory$InstanceHolder
-com/codesroots/live/databinding/RowItemOrderTimeBindingImpl.java
- com.codesroots.live.databinding.RowItemOrderTimeBindingImpl
-com/codesroots/live/presentation/auth/AuthViewModel_MembersInjector.java
- com.codesroots.live.presentation.auth.AuthViewModel_MembersInjector
 com/codesroots/live/di/APIModule_ProvideRetrofitFactory.java
  com.codesroots.live.di.APIModule_ProvideRetrofitFactory
-com/codesroots/live/helper/LocalStorageProvider.java
- com.codesroots.live.helper.LocalStorageProvider
+com/codesroots/live/di/AppModule_ProvideTasksBranchDataSourceFactory.java
+ com.codesroots.live.di.AppModule_ProvideTasksBranchDataSourceFactory
 com/codesroots/live/di/APIModule_ProvideHttpClientFactory.java
  com.codesroots.live.di.APIModule_ProvideHttpClientFactory
-com/codesroots/live/databinding/DeliveryLoginFragmentBindingImpl.java
- com.codesroots.live.databinding.DeliveryLoginFragmentBindingImpl
-com/codesroots/live/BuildConfig.java
- com.codesroots.live.BuildConfig
-com/codesroots/live/di/AppModule_ProvidePreferenceHelperFactory.java
- com.codesroots.live.di.AppModule_ProvidePreferenceHelperFactory
 com/codesroots/live/di/APIModule_ApiServicesFactory.java
  com.codesroots.live.di.APIModule_ApiServicesFactory
+com/codesroots/live/di/APIModule_ProvideConverterFactoryFactory.java
+ com.codesroots.live.di.APIModule_ProvideConverterFactoryFactory
+com/codesroots/live/di/AppModule_ProvideSweetAlertDialogFactory.java
+ com.codesroots.live.di.AppModule_ProvideSweetAlertDialogFactory
+com/codesroots/live/di/AppModule_ProvidePreferenceHelperFactory.java
+ com.codesroots.live.di.AppModule_ProvidePreferenceHelperFactory
+com/codesroots/live/presentation/auth/AuthViewModel_MembersInjector.java
+ com.codesroots.live.presentation.auth.AuthViewModel_MembersInjector
+com/codesroots/live/presentation/auth/AuthViewModel_Factory.java
+ com.codesroots.live.presentation.auth.AuthViewModel_Factory
 com/codesroots/live/di/ActivityBuildersModule_ContributeMainActivity.java
  com.codesroots.live.di.ActivityBuildersModule_ContributeMainActivity
  com.codesroots.live.di.ActivityBuildersModule_ContributeMainActivity$MainActivitySubcomponent

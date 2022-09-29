@@ -77,8 +77,11 @@ import java.net.URL
 import javax.inject.Inject
 import com.codesroots.live.R
 import com.codesroots.live.databinding.NavHeaderMainBinding
+import com.codesroots.live.models.auth.Coordinates
+import com.codesroots.live.models.auth.TrackingModel
 import com.codesroots.live.presentation.current_order_fragment.mvi.MainIntent
 import com.codesroots.live.presentation.deliveries_fragment.DeliveriesFragment
+import org.json.JSONObject
 import java.util.*
 import kotlin.collections.ArrayList
 
@@ -93,8 +96,12 @@ class MapActivity : AppCompatActivity(), HasAndroidInjector, OnMapReadyCallback,
 
     var latitude: Double? = null //-33.867
     var longitude: Double? = null // 151.206
-    var PlaceId_2 :String? = null
-    var PlaceId_3:String? = null
+    var PlaceId_2: String? = null
+    var PlaceId_3: String? = null
+
+
+    var deliveryLocation: Location? = null
+
 
 
     val overlaySize = 100f
@@ -109,6 +116,7 @@ class MapActivity : AppCompatActivity(), HasAndroidInjector, OnMapReadyCallback,
 
     var mSocket: Socket? = null
     var data: ArrayList<OrdersItem>? = null
+    var trackingData: TrackingModel? = null
 
     var userLocationMarker: Marker? = null
     var isConnected = false;
@@ -123,34 +131,8 @@ class MapActivity : AppCompatActivity(), HasAndroidInjector, OnMapReadyCallback,
     var locationRequest: LocationRequest? = null
 
 
-
     val viewModel by viewModels<CurrentOrderViewModel> { viewModelFactory }
-    val locationCallback: LocationCallback = object : LocationCallback() {
-        override fun onLocationResult(locationResult: LocationResult) {
-            if (locationResult != null) {
-                if (locationResult == null) {
-                    return
-                }
 
-                getClientAddress(locationResult.lastLocation)
-
-                //Showing the latitude, longitude and accuracy on the home screen.
-                //      for (location in locationResult.locations) {
-                // map.animateCamera(CameraUpdateFactory.newLatLngZoom(LatLng( locationResult.lastLocation.latitude, locationResult.lastLocation.longitude), 16.0f))
-
-                latitude = locationResult.lastLocation.latitude
-                longitude = locationResult.lastLocation.longitude
-
-
-              viewModel.intents.trySend(MainIntent.GetPlaceId(viewModel.state.value!!.copy(cliendLatitude = latitude!!,cliendLongitude =longitude!!,progress = true)))
-
-
-
-
-                //   }
-            }
-        }
-    }
 
     public override fun onCreate(icicle: Bundle?) {
         AndroidInjection.inject(this)
@@ -171,10 +153,8 @@ class MapActivity : AppCompatActivity(), HasAndroidInjector, OnMapReadyCallback,
 
         statusCheck()
 
-        var headerBinding: NavHeaderMainBinding = NavHeaderMainBinding.bind(binding.navView.getHeaderView(0))
-
-
-
+        var headerBinding: NavHeaderMainBinding =
+            NavHeaderMainBinding.bind(binding.navView.getHeaderView(0))
 
 
         ////////////// Socket ///////////////////////
@@ -190,37 +170,39 @@ class MapActivity : AppCompatActivity(), HasAndroidInjector, OnMapReadyCallback,
 
         socket.on(Socket.EVENT_CONNECT) {
             try {
-                restaurantStatus(" متصل",true,R.drawable.online_ic)
+                restaurantStatus(" متصل", true, R.drawable.online_ic)
                 Log.d("TAG", "socket// ${"connect"}")
 
             } catch (e: Exception) {
                 Log.d(TAG, e.message!!)
             }
         }
-              .on(Socket.EVENT_CONNECT_ERROR) {
-            val e = it[0]
-            Log.e(TAG, "error $e")
-            runOnUiThread {
-            WARN_MotionToast("error $e", this)
-            }
-        }
-               .on(Socket.EVENT_DISCONNECT) {
-            val e = it[0]
-            Log.e(TAG, "Transport error $e")
+            .on(Socket.EVENT_CONNECT_ERROR) {
+                val e = it[0]
+                Log.e(TAG, "error $e")
                 runOnUiThread {
-                restaurantStatus("غير متصل",false,R.drawable.offline_ic)
+                    WARN_MotionToast("error $e", this)
+                }
+            }
+            .on(Socket.EVENT_DISCONNECT) {
+                val e = it[0]
+                Log.e(TAG, "Transport error $e")
+                runOnUiThread {
+                    restaurantStatus("غير متصل", false, R.drawable.offline_ic)
                     WARN_MotionToast("غير متصل", this)
 
-                Log.d("TAG", "sockety// ${mSocket?.connected()}")
+                    Log.d("TAG", "sockety// ${mSocket?.connected()}")
+                }
             }
-        }
-               .on(Socket.EVENT_RECONNECT){
-            nav_view.getHeaderView(0).switch1.isChecked
-            connectToSocket()
-        }
+            .on(Socket.EVENT_RECONNECT) {
+                nav_view.getHeaderView(0).switch1.isChecked
+                connectToSocket()
+            }
 
         mSocket?.emit("CreateDeliveryRoom", Pref.room_id!!)
+
         connectToSocket()
+
         mSocket?.on("makeNewOrderToBranch") {
             var mp = MediaPlayer.create(this, R.raw.alarm);
             mp.start();
@@ -232,7 +214,17 @@ class MapActivity : AppCompatActivity(), HasAndroidInjector, OnMapReadyCallback,
                 data?.add(0, newitem)
                 ClickHandler().openDialogFragment(this, NewOrderFragment(newitem!!, viewModel), "")
                 Log.d("socket", json)
+            }
 
+        }
+
+        mSocket?.on("RetriveDriverCoordinate") {
+            runOnUiThread {
+                val gson = Gson()
+                val json = it.first().toString()
+                val type = object : TypeToken<Coordinates?>() {}.type
+                val newitem = gson.fromJson<Coordinates>(json, type)
+                getClientAddress(newitem,deliveryLocation!!)
             }
 
         }
@@ -250,20 +242,21 @@ class MapActivity : AppCompatActivity(), HasAndroidInjector, OnMapReadyCallback,
         } catch (e: java.lang.Exception) {
 
         }
+
         nav_view.setNavigationItemSelectedListener(this)
         nav_view.getHeaderView(0).switch1
             ?.setOnClickListener {
                 if (nav_view.getHeaderView(0).switch1.isChecked) {
                     // The switch enabled
                     connectToSocket()
-                    restaurantStatus(" متصل",true,R.drawable.online_ic)
+                    restaurantStatus(" متصل", true, R.drawable.online_ic)
                     Log.d("TAG", "socket// ${mSocket?.connected()}")
 
                 } else {
                     // The switch disabled
                     mSocket?.disconnect()
                     runOnUiThread {
-                        restaurantStatus("غير متصل",false,R.drawable.offline_ic)
+                        restaurantStatus("غير متصل", false, R.drawable.offline_ic)
                         WARN_MotionToast("غير متصل", this)
                         Log.d("TAG", "socket// ${mSocket?.connected()}")
 
@@ -306,9 +299,9 @@ class MapActivity : AppCompatActivity(), HasAndroidInjector, OnMapReadyCallback,
             // Get new FCM registration token
             val token = task.result
             registerTokenRequest(token)
-            viewModel.updateUserToken(Pref.userId,Token(token))
+            viewModel.updateUserToken(Pref.userId, Token(token))
 
-            Log.d("TAG", "token:///:"  + Pref.VendorId +"///"+ token)
+            Log.d("TAG", "token:///:" + Pref.VendorId + "///" + token)
             if (!Pref.UserToken.isNullOrEmpty()) {
                 lifecycleScope.launch {
 
@@ -354,7 +347,6 @@ class MapActivity : AppCompatActivity(), HasAndroidInjector, OnMapReadyCallback,
             checkBackgroundLocation()
         }
     }
-
 
 
     private fun requestLocationPermission() {
@@ -411,7 +403,7 @@ class MapActivity : AppCompatActivity(), HasAndroidInjector, OnMapReadyCallback,
         map = googleMap
         map!!.clear();
         MapHelper().setPoiClick(map!!)
-        //MapHelper().setMapStyle(map, this)
+   //    MapHelper().setMapStyle(map!!, this)
         //  statusCheck()
 
         //  getLocationPermission()
@@ -448,9 +440,15 @@ class MapActivity : AppCompatActivity(), HasAndroidInjector, OnMapReadyCallback,
             if (location == null) {
                 MapHelper().NewLocationData(context)
             }
-
+            deliveryLocation = location
             latitude = location!!.latitude
             longitude = location.longitude
+            getMyLocation()
+            viewModel.intents.trySend(MainIntent.GetPlaceId(viewModel.state.value!!.copy(
+                cliendLatitude = location!!.latitude!!,
+                cliendLongitude = location.longitude,
+                progress = true)))
+
 
             map!!.animateCamera(
                 CameraUpdateFactory.newLatLngZoom(
@@ -462,123 +460,130 @@ class MapActivity : AppCompatActivity(), HasAndroidInjector, OnMapReadyCallback,
             )
             homeLatLng = LatLng(latitude!!, longitude!!)
 
+                    map!!.addMarker(MarkerOptions()
+                    .position(homeLatLng)
+
+                )
         }
 
     }
 
+    fun getMyLocation() {
+        lifecycleScope.launchWhenStarted {
+            viewModel.state.collect {
+                if (it != null) {
+                    if (it.PlaceId_2 != null && it.PlaceId_3 != null) {
+                        Pref.placeId_3 = it.PlaceId_3
+                        Pref.placeId_2 = it.PlaceId_2
+                        Log.d("TAG", "PlaceId_3:///:" + PlaceId_3 + "///" + PlaceId_2)
+                    }
+                }
 
+            }
 
-    override fun onPause() {
-        super.onPause()
+        }
     }
+    fun setUserLocationMarker(location: Location) {
+        homeLatLng = LatLng(location.latitude, location.longitude)
+        if (userLocationMarker == null) {
+            userLocationMarker = map!!.addMarker(MarkerOptions()
+                .position(homeLatLng)
+                .icon(BitmapDescriptorFactory
+                    .fromResource(R.drawable.motor_ic))
+                .rotation(location.bearing)
+                .anchor(0.5f, 0.5f)
+            )
+
+        } else {
+            userLocationMarker!!.position = homeLatLng
+            userLocationMarker!!.rotation = location.bearing
 
 
+        }
+    }
+    fun getClientAddress(location: Coordinates,locationn: Location) {
 
-
-    fun getClientAddress(location: Location) {
         try {
-            lifecycleScope.launchWhenStarted {
-                viewModel.state.collect {
-                    if (it != null) {
-                        val end_latitude = it.cliendLatitude
-                        val end_longitude = it.cliendLongitude
-                        if(it.PlaceId_2 != null && it.PlaceId_3 != null){
-                            PlaceId_3 = it.PlaceId_3
-                            PlaceId_2 = it.PlaceId_2
-                            Log.d("TAG", "PlaceId_3:///:"  + Pref.VendorId +"///"+ PlaceId_3)
+            val end_latitude = location.latitude
+            val end_longitude = location.longitude
 
-                        }
-                        if (end_latitude != null && end_longitude != null)
+            val clientLatLng = LatLng(end_latitude!!, end_longitude!!)
+                if (userLocationMarker == null) {
+                    userLocationMarker = map!!.addMarker(MarkerOptions()
+                        .position(clientLatLng)
+                        .icon(BitmapDescriptorFactory
+                            .fromResource(R.drawable.motor_ic))
+                      .rotation(locationn.bearing)
+                        .anchor(0.5f, 0.5f)
+                    )
 
-                            if (it.progress == true) {
+                } else {
+                   // userLocationMarker!!.position = homeLatLng
+               //     userLocationMarker!!.rotation = location.bearing
 
-                                val clientLatLng = LatLng(end_latitude, end_longitude)
-                                if (userLocationMarker == null) {
-                                    userLocationMarker = map!!.addMarker(MarkerOptions()
-                                        .position(homeLatLng)
-                                        .icon(BitmapDescriptorFactory
-                                            .fromResource(R.drawable.motor_ic))
-                                        .rotation(location.bearing)
-                                        .anchor(0.5f, 0.5f)
-                                    )
+                }
+//            map!!.animateCamera(CameraUpdateFactory.newLatLngZoom(LatLng(
+//                end_latitude,
+//                end_longitude), 16.0f))
 
-                                } else {
-                                    userLocationMarker!!.position = homeLatLng
-                                    userLocationMarker!!.rotation = location.bearing
+           // map!!.addMarker(MarkerOptions().position(clientLatLng))
 
-                                }
-//                                map.animateCamera(CameraUpdateFactory.newLatLngZoom(LatLng(
-//                                    end_latitude,
-//                                    end_longitude), 16.0f))
+            val options = PolylineOptions()
+            options.color(this@MapActivity.getColor(R.color.black))
+            options.width(10f)
+            val url = getURL(homeLatLng, clientLatLng)
 
-                                map!!.addMarker(MarkerOptions().position(clientLatLng))
+            async {
+                // Connect to URL, download content and convert into string asynchronously
+                val result = URL(url).readText()
+                val LatLongB = LatLngBounds.Builder()
 
-                                val options = PolylineOptions()
-                                options.color(this@MapActivity.getColor(R.color.orange))
-                                options.width(10f)
-                                val url = getURL(homeLatLng, clientLatLng)
+                onUiThread {
+                    // When API call is done, create parser and convert into JsonObjec
+                    val parser: Parser = Parser()
+                    val stringBuilder: StringBuilder = StringBuilder(result)
+                    val json: com.beust.klaxon.JsonObject =
+                        parser.parse(stringBuilder) as com.beust.klaxon.JsonObject
+                    // get to the correct element in JsonObject
+                    try {
 
-                                async {
-                                    // Connect to URL, download content and convert into string asynchronously
-                                    val result = URL(url).readText()
-                                    val LatLongB = LatLngBounds.Builder()
+                        val routes =
+                            json.array<com.beust.klaxon.JsonObject>("routes")
 
-                                    onUiThread {
-                                        // When API call is done, create parser and convert into JsonObjec
-                                        val parser: Parser = Parser()
-                                        val stringBuilder: StringBuilder = StringBuilder(result)
-                                        val json: com.beust.klaxon.JsonObject =
-                                            parser.parse(stringBuilder) as com.beust.klaxon.JsonObject
-                                        // get to the correct element in JsonObject
-                                        try {
+                        val points =
+                            routes!!["legs"]["steps"][0] as com.beust.klaxon.JsonArray<com.beust.klaxon.JsonObject>
 
-                                            val routes =
-                                                json.array<com.beust.klaxon.JsonObject>("routes")
+                        // For every element in the JsonArray, decode the polyline string and pass all points to a List
 
-                                            val points =
-                                                routes!!["legs"]["steps"][0] as com.beust.klaxon.JsonArray<com.beust.klaxon.JsonObject>
-
-                                            // For every element in the JsonArray, decode the polyline string and pass all points to a List
-
-                                            val polypts =
-                                                points.flatMap {
-                                                    decodePoly(it.obj("polyline")
-                                                        ?.string("points")!!)
-                                                }
-                                            // Add  points to polyline and bounds
-
-                                            options.add(homeLatLng)
-                                            LatLongB.include(homeLatLng)
-                                            for (point in polypts) {
-                                                options.add(point)
-                                                LatLongB.include(point)
-                                            }
-                                            options.add(clientLatLng)
-                                            LatLongB.include(clientLatLng)
-                                            // build bounds
-                                            val bounds = LatLongB.build()
-                                            // add polyline to the map
-                                            map!!.addPolyline(options)
-                                            // show map with route centered
-                                            map!!.moveCamera(CameraUpdateFactory.newLatLngBounds(
-                                                bounds,
-                                                60))
-                                        } catch (e: Exception) {
-                                        }
-                                    }
-                                }
-
-
+                        val polypts =
+                            points.flatMap {
+                                decodePoly(it.obj("polyline")
+                                    ?.string("points")!!)
                             }
+                        // Add  points to polyline and bounds
 
-                    } else
-                        Toast.makeText(
-                            this@MapActivity,
-                            "Please Turn on Your device Location",
-                            Toast.LENGTH_SHORT
-                        ).show()
+                        options.add(homeLatLng)
+                        LatLongB.include(homeLatLng)
+                        for (point in polypts) {
+                            options.add(point)
+                            LatLongB.include(point)
+                        }
+                        options.add(clientLatLng)
+                        LatLongB.include(clientLatLng)
+                        // build bounds
+                        val bounds = LatLongB.build()
+                        // add polyline to the map
+                        map!!.addPolyline(options)
+                        // show map with route centered
+                        map!!.moveCamera(CameraUpdateFactory.newLatLngBounds(
+                            bounds,
+                            60))
+                    } catch (e: Exception) {
+                    }
                 }
             }
+
+
         } catch (e: IOException) {
             e.printStackTrace()
         }
@@ -594,7 +599,7 @@ class MapActivity : AppCompatActivity(), HasAndroidInjector, OnMapReadyCallback,
 
         val params = "$origin&$dest&$sensor"
 
-        return "https://maps.googleapis.com/maps/api/directions/json?$params&key=AIzaSyBxgJFTad1Ir0m_pn7dfzm3qVGnK7IyoFQ"
+        return "https://maps.googleapis.com/maps/api/directions/json?$params&key="//AIzaSyD_U2-w1Zald01AAXfi4vO6EH35YYc0-hM
 
     }
 
@@ -725,14 +730,13 @@ class MapActivity : AppCompatActivity(), HasAndroidInjector, OnMapReadyCallback,
     }
 
 
-
     override fun onResume() {
         super.onResume()
 
         connectToSocket()
     }
 
-    fun restaurantStatus(resStatus:String,isChecked:Boolean,icon:Int){
+    fun restaurantStatus(resStatus: String, isChecked: Boolean, icon: Int) {
         nav_view.getHeaderView(0).switch1.isChecked = isChecked
         status.text = resStatus
         statusIcon.setImageResource(icon)
@@ -745,7 +749,7 @@ class MapActivity : AppCompatActivity(), HasAndroidInjector, OnMapReadyCallback,
 
     }
 
-    fun registerTokenRequest(firebaseToken:String) {
+    fun registerTokenRequest(firebaseToken: String) {
         val registerTokenInfo = AuthModel(
             token = firebaseToken, user_id = Pref.userId)
 

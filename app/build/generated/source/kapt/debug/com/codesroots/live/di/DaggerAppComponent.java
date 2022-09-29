@@ -318,6 +318,7 @@ public final class DaggerAppComponent implements AppComponent {
   @CanIgnoreReturnValue
   private DeliveriesFragment injectDeliveriesFragment(DeliveriesFragment instance) {
     DeliveriesFragment_MembersInjector.injectViewModelFactory(instance, viewModelFactory());
+    DeliveriesFragment_MembersInjector.injectPref(instance, preferenceHelper());
     return instance;
   }
 
