@@ -71,6 +71,8 @@ class LoginActivity : AppCompatActivity() {
 
                 pref.UserToken = it.token
                 pref.restaurantName = it.user!!.branches?.name
+                pref.VendorId = it.user!!.branches?.id
+
                 pref.room_id = it.user!!.room_id
                 pref.userId = it.user!!.branches?.id!!
                 pref.restaurantLat = it.user!!.branches?.latitude.toString()

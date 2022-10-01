@@ -3,6 +3,7 @@ package com.codesroots.live.presentation.deliveries_fragment
 import android.app.Dialog
 import android.os.Bundle
 import android.os.Handler
+import android.os.Looper
 import android.util.DisplayMetrics
 import android.util.Log
 import android.view.*
@@ -44,6 +45,31 @@ class DeliveriesFragment @Inject constructor() : DialogFragment() {
     lateinit var pref: PreferenceHelper
     lateinit var view: DeliveriesFragmentBinding
 
+    lateinit var mainHandler: Handler
+
+    private val updateTextTask = object : Runnable {
+        override fun run() {
+if (pref.placeId_2 != null) {
+    val data = DeliveryItem(
+        admivstrative_area_2 = pref.placeId_2,
+        admivstrative_area_3 = pref.placeId_3,
+    )
+
+    viewModel.getDeliveris(data)
+}
+            mainHandler.postDelayed(this, 10000)
+
+        }
+
+
+    }
+
+    override fun onPause() {
+        super.onPause()
+        mainHandler.removeCallbacks(updateTextTask)
+    }
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         BaseApplication.appComponent.inject(this)
@@ -53,6 +79,8 @@ class DeliveriesFragment @Inject constructor() : DialogFragment() {
           data = mArgs?.getSerializable("item_data") as OrdersItem
             Log.d("TAG","socket// setOnClickListener data $data")
         }
+        mainHandler = Handler(Looper.getMainLooper())
+
     }
 
     override fun onCreateView(
@@ -69,7 +97,7 @@ class DeliveriesFragment @Inject constructor() : DialogFragment() {
         dialog!!.setCanceledOnTouchOutside(true);
 
 
-        val data = DeliveryItem(branch_id = data.branch_id, admivstrative_area_2 = pref.placeId_2, admivstrative_area_3 = pref.placeId_3,)
+        val data = DeliveryItem( admivstrative_area_2 = pref.placeId_2, admivstrative_area_3 = pref.placeId_3,)
 
         viewModel.getDeliveris(data)
 

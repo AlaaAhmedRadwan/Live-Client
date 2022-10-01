@@ -51,6 +51,7 @@ class DeliveriesAdapter(
         p0.bind(data[position], context)
         ////////////// Socket ///////////////////////
         try {
+
             index = position
             p0.binding.send.setOnClickListener {
                 p0.binding.progress.isVisible = true
@@ -92,7 +93,7 @@ class DeliveriesAdapter(
                     Log.d("TAG", "socket// orderDelivery " + json)
                     SUCCESS_MotionToast("تم قبول الاوردر", context as MapActivity)
                     frag.view.progress.isVisible = false
-                    frag.dismiss()
+//                    frag.dismiss()
                 }
             } else {
                 Handler(Looper.getMainLooper()).post {
@@ -143,10 +144,11 @@ class DeliveriesAdapter(
         pDialog.show();
     }
 
-    private fun addOrder(p0: CustomViewHolders){
-        val orderModel = OrderModel(branch_id = data[0].branch_id,
+    private  fun addOrder(p0: CustomViewHolders){
+        val orderModel = OrderModel(branch_id = frag.pref.VendorId,
             total = p0.binding.total.text.toString().toDouble(),
            )
+
         frag.viewModel.addOrder(orderModel)
     }
     override fun onCreateViewHolder(p0: ViewGroup, p1: Int): CustomViewHolders {

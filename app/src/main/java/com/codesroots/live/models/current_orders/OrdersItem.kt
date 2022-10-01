@@ -1,6 +1,5 @@
 package com.codesroots.live.models.current_orders
 
-import com.codesroots.live.models.Branches
 import com.codesroots.live.models.Drivers
 import com.codesroots.live.models.Offers
 import com.codesroots.live.models.Users
