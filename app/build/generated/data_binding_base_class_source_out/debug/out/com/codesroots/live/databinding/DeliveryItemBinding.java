@@ -25,9 +25,6 @@ import java.lang.Object;
 
 public abstract class DeliveryItemBinding extends ViewDataBinding {
   @NonNull
-  public final TextInputEditText deliveryService;
-
-  @NonNull
   public final TextInputLayout deliveryServiceContainer;
 
   @NonNull
@@ -61,12 +58,10 @@ public abstract class DeliveryItemBinding extends ViewDataBinding {
   protected ClickHandler mListener;
 
   protected DeliveryItemBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      TextInputEditText deliveryService, TextInputLayout deliveryServiceContainer,
-      ShapeableImageView ivImage, ConstraintLayout mView, AppCompatTextView name,
-      FrameLayout progress, AppCompatButton send, TextInputEditText total,
+      TextInputLayout deliveryServiceContainer, ShapeableImageView ivImage, ConstraintLayout mView,
+      AppCompatTextView name, FrameLayout progress, AppCompatButton send, TextInputEditText total,
       TextInputLayout totalContainer) {
     super(_bindingComponent, _root, _localFieldCount);
-    this.deliveryService = deliveryService;
     this.deliveryServiceContainer = deliveryServiceContainer;
     this.ivImage = ivImage;
     this.mView = mView;

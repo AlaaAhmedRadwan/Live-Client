@@ -16,11 +16,10 @@ public class DeliveryItemBindingImpl extends DeliveryItemBinding  {
         sViewsWithIds = new android.util.SparseIntArray();
         sViewsWithIds.put(R.id.mView, 3);
         sViewsWithIds.put(R.id.deliveryServiceContainer, 4);
-        sViewsWithIds.put(R.id.deliveryService, 5);
-        sViewsWithIds.put(R.id.totalContainer, 6);
-        sViewsWithIds.put(R.id.total, 7);
-        sViewsWithIds.put(R.id.send, 8);
-        sViewsWithIds.put(R.id.progress, 9);
+        sViewsWithIds.put(R.id.totalContainer, 5);
+        sViewsWithIds.put(R.id.total, 6);
+        sViewsWithIds.put(R.id.send, 7);
+        sViewsWithIds.put(R.id.progress, 8);
     }
     // views
     @NonNull
@@ -31,19 +30,18 @@ public class DeliveryItemBindingImpl extends DeliveryItemBinding  {
     // Inverse Binding Event Handlers
 
     public DeliveryItemBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 10, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 9, sIncludes, sViewsWithIds));
     }
     private DeliveryItemBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 0
-            , (com.google.android.material.textfield.TextInputEditText) bindings[5]
             , (com.google.android.material.textfield.TextInputLayout) bindings[4]
             , (com.google.android.material.imageview.ShapeableImageView) bindings[1]
             , (androidx.constraintlayout.widget.ConstraintLayout) bindings[3]
             , (androidx.appcompat.widget.AppCompatTextView) bindings[2]
-            , (android.widget.FrameLayout) bindings[9]
-            , (androidx.appcompat.widget.AppCompatButton) bindings[8]
-            , (com.google.android.material.textfield.TextInputEditText) bindings[7]
-            , (com.google.android.material.textfield.TextInputLayout) bindings[6]
+            , (android.widget.FrameLayout) bindings[8]
+            , (androidx.appcompat.widget.AppCompatButton) bindings[7]
+            , (com.google.android.material.textfield.TextInputEditText) bindings[6]
+            , (com.google.android.material.textfield.TextInputLayout) bindings[5]
             );
         this.ivImage.setTag(null);
         this.mboundView0 = (androidx.constraintlayout.widget.ConstraintLayout) bindings[0];

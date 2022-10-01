@@ -1,5 +1,7 @@
 package com.codesroots.live.models.delivery
 
+import com.codesroots.live.models.current_orders.Branches
+
 data class DeliveryItem(
     var approval: Int?=null,
     var branch_id: Int?=null,

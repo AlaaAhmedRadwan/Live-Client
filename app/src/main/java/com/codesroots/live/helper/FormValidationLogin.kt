@@ -16,21 +16,12 @@ class FormValidationLogin {
         binding.deliveryServiceContainer .setOnFocusChangeListener { _, focused ->
             if(!focused)
             {
-                binding.totalContainer.helperText = validDeliveryService(context ,binding)
+         //       binding.totalContainer.helperText = validDeliveryService(context ,binding)
             }
         }
     }
 
-    private fun validDeliveryService(context: Context,binding: DeliveryItemBinding): String?
-    {
 
-        val deliveryService = binding.deliveryService.text.toString()
-        if(deliveryService.isEmpty())
-        {
-        return context.getString(R.string.validDelivery)
-        }
-        return null
-    }
 
     private fun validTotal(context: Context,binding: DeliveryItemBinding): String?
     {
@@ -50,7 +41,7 @@ class FormValidationLogin {
      fun submitForm(binding: DeliveryItemBinding,context: Context): Boolean {
 
         binding.totalContainer.helperText = validTotal(context,binding)
-        binding.deliveryServiceContainer.helperText = validDeliveryService(context,binding)
+      //  binding.deliveryServiceContainer.helperText = validDeliveryService(context,binding)
         val validtotal = binding.totalContainer.helperText == null
         val validdelivery =  binding.deliveryServiceContainer.helperText == null
 

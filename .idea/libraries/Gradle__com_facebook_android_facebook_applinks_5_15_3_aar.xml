@@ -4,6 +4,9 @@
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/6d604ca5658d6cda42afce44482e2fbe/transformed/jetified-facebook-applinks-5.15.3/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/6d604ca5658d6cda42afce44482e2fbe/transformed/jetified-facebook-applinks-5.15.3/res" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/6d604ca5658d6cda42afce44482e2fbe/transformed/jetified-facebook-applinks-5.15.3/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/84ca56fc4e7e20f80d63af41152483b2/transformed/jetified-facebook-applinks-5.15.3/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/84ca56fc4e7e20f80d63af41152483b2/transformed/jetified-facebook-applinks-5.15.3/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/84ca56fc4e7e20f80d63af41152483b2/transformed/jetified-facebook-applinks-5.15.3/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.facebook.android/facebook-applinks/5.15.3/9c2ed5df92615e080cedace105ef91c63bb8096b/facebook-applinks-5.15.3-javadoc.jar!/" />

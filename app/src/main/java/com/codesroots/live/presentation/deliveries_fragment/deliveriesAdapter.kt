@@ -93,7 +93,7 @@ class DeliveriesAdapter(
                     Log.d("TAG", "socket// orderDelivery " + json)
                     SUCCESS_MotionToast("تم قبول الاوردر", context as MapActivity)
                     frag.view.progress.isVisible = false
-                    frag.dismiss()
+//                    frag.dismiss()
                 }
             } else {
                 Handler(Looper.getMainLooper()).post {
@@ -145,9 +145,9 @@ class DeliveriesAdapter(
     }
 
     private  fun addOrder(p0: CustomViewHolders){
-        val orderModel = OrderModel(branch_id = data[0].branch_id,
+        val orderModel = OrderModel(branch_id = frag.pref.VendorId,
             total = p0.binding.total.text.toString().toDouble(),
-            delivery_serivce = p0.binding.deliveryService.text.toString().toInt())
+           )
 
         frag.viewModel.addOrder(orderModel)
     }

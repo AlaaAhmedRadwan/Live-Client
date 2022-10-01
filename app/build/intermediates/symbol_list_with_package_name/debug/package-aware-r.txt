@@ -4548,7 +4548,6 @@ id decor_content_parent
 id default_activity_button
 id delivered
 id deliveriesRecycle
-id deliveryService
 id deliveryServiceContainer
 id deliveryTime
 id deliveryTimeText

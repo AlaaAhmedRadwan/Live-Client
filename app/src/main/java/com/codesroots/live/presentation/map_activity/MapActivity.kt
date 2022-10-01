@@ -84,6 +84,8 @@ import com.codesroots.live.presentation.deliveries_fragment.DeliveriesFragment
 import org.json.JSONObject
 import java.util.*
 import kotlin.collections.ArrayList
+import com.github.dhaval2404.imagepicker.util.PermissionUtil.isPermissionGranted
+import com.github.dhaval2404.imagepicker.util.PermissionUtil.isPermissionInManifest
 
 class MapActivity : AppCompatActivity(), HasAndroidInjector, OnMapReadyCallback,
     NavigationView.OnNavigationItemSelectedListener {
@@ -93,6 +95,7 @@ class MapActivity : AppCompatActivity(), HasAndroidInjector, OnMapReadyCallback,
     internal var mFusedLocationClient: FusedLocationProviderClient? = null
 
     var map: GoogleMap? = null
+    private var permissionDenied = false
 
     var latitude: Double? = null //-33.867
     var longitude: Double? = null // 151.206
@@ -102,9 +105,6 @@ class MapActivity : AppCompatActivity(), HasAndroidInjector, OnMapReadyCallback,
 
     var deliveryLocation: Location? = null
 
-
-
-    val overlaySize = 100f
     var address = ""
 
     var mDrawerLayout: DrawerLayout? = null
@@ -116,10 +116,8 @@ class MapActivity : AppCompatActivity(), HasAndroidInjector, OnMapReadyCallback,
 
     var mSocket: Socket? = null
     var data: ArrayList<OrdersItem>? = null
-    var trackingData: TrackingModel? = null
 
     var userLocationMarker: Marker? = null
-    var isConnected = false;
 
     @Inject
     lateinit var socket: Socket
@@ -128,7 +126,6 @@ class MapActivity : AppCompatActivity(), HasAndroidInjector, OnMapReadyCallback,
     lateinit var viewModelFactory: ViewModelProvider.Factory
 
 
-    var locationRequest: LocationRequest? = null
 
 
     val viewModel by viewModels<CurrentOrderViewModel> { viewModelFactory }
@@ -195,8 +192,11 @@ class MapActivity : AppCompatActivity(), HasAndroidInjector, OnMapReadyCallback,
                 }
             }
             .on(Socket.EVENT_RECONNECT) {
+
                 nav_view.getHeaderView(0).switch1.isChecked
                 connectToSocket()
+                restaurantStatus(" متصل", true, R.drawable.online_ic)
+
             }
 
         mSocket?.emit("CreateDeliveryRoom", Pref.room_id!!)
@@ -278,6 +278,13 @@ class MapActivity : AppCompatActivity(), HasAndroidInjector, OnMapReadyCallback,
             }
         })
 
+
+        FireBase()
+        clickHandlers()
+        getMyLocation()
+
+    }
+private fun clickHandlers(){
         siteDrawerMenuButton.setOnClickListener { view ->
             this.openCloseNavigationDrawer(view)
             note.setImageDrawable(ContextCompat.getDrawable(this, R.drawable.note));
@@ -289,29 +296,28 @@ class MapActivity : AppCompatActivity(), HasAndroidInjector, OnMapReadyCallback,
             ClickHandler().openDialogFragment(this, DeliveriesFragment(), "")
 
         }
+}
+private  fun FireBase(){
+    FirebaseMessaging.getInstance().token.addOnCompleteListener(OnCompleteListener { task ->
+        if (!task.isSuccessful) {
+            Log.d("TAG", "token:///:false ${task.exception?.message}")
+            return@OnCompleteListener
+        }
 
-        FirebaseMessaging.getInstance().token.addOnCompleteListener(OnCompleteListener { task ->
-            if (!task.isSuccessful) {
-                Log.d("TAG", "token:///:false ${task.exception?.message}")
-                return@OnCompleteListener
+        // Get new FCM registration token
+        val token = task.result
+        registerTokenRequest(token)
+        viewModel.updateUserToken(Pref.userId, Token(token))
+
+        Log.d("TAG", "token:///:" + Pref.VendorId + "///" + token)
+        if (!Pref.UserToken.isNullOrEmpty()) {
+            lifecycleScope.launch {
+
             }
-
-            // Get new FCM registration token
-            val token = task.result
-            registerTokenRequest(token)
-            viewModel.updateUserToken(Pref.userId, Token(token))
-
-            Log.d("TAG", "token:///:" + Pref.VendorId + "///" + token)
-            if (!Pref.UserToken.isNullOrEmpty()) {
-                lifecycleScope.launch {
-
-                }
-            }
-            // Log and toast
-        })
-    }
-
-
+        }
+        // Log and toast
+    })
+}
     private fun checkLocationPermission() {
         if (ActivityCompat.checkSelfPermission(
                 this,
@@ -388,8 +394,8 @@ class MapActivity : AppCompatActivity(), HasAndroidInjector, OnMapReadyCallback,
     }
 
     companion object {
-        private const val MY_PERMISSIONS_REQUEST_LOCATION = 99
-        private const val MY_PERMISSIONS_REQUEST_BACKGROUND_LOCATION = 66
+        private const val MY_PERMISSIONS_REQUEST_LOCATION = 1010
+        private const val MY_PERMISSIONS_REQUEST_BACKGROUND_LOCATION = 1010
     }
 
     @Inject
@@ -412,24 +418,54 @@ class MapActivity : AppCompatActivity(), HasAndroidInjector, OnMapReadyCallback,
         //  map.animateCamera(CameraUpdateFactory.newLatLngZoom(LatLng(-34.0, 151.0), 16.0f))
         MapHelper().RequestPermission(this)
         checkLocationPermission()
+        CheckForPermessionEnabled()
+
+    }
+    override fun onRequestPermissionsResult(
+        requestCode: Int,
+        permissions: Array<String>,
+        grantResults: IntArray
+    ) {
+        Log.i(TAG, "onRequestPermissionsResult: "+requestCode)
+
+        if (requestCode != MY_PERMISSIONS_REQUEST_LOCATION) {
+            super.onRequestPermissionsResult(
+                requestCode,
+                permissions,
+                grantResults
+            )
+            return
+        }
 
         if (MapHelper().CheckPermission(this)) {
             if (MapHelper().isLocationEnabled(this)) {
-                enableMyLocation(this)
+
+                // Enable the my location layer if the permission has been granted.
+                enableMyLocation(context = this)
             } else {
-
-                Toast.makeText(
-                    this,
-                    "Please Turn on Your device Location",
-                    Toast.LENGTH_SHORT
-                ).show()
+                // Permission was denied. Display an error message
+                // Display the missing permission error dialog when the fragments resume.
+                permissionDenied = true
             }
-        } else {
-            MapHelper().RequestPermission(this)
-
         }
     }
+fun CheckForPermessionEnabled(){
+    if (MapHelper().CheckPermission(this)) {
+        if (MapHelper().isLocationEnabled(this)) {
+          //  enableMyLocation(this)
+        } else {
 
+            Toast.makeText(
+                this,
+                "Please Turn on Your device Location",
+                Toast.LENGTH_SHORT
+            ).show()
+        }
+    } else {
+        MapHelper().RequestPermission(this)
+
+    }
+}
 
     @SuppressLint("MissingPermission")
     fun enableMyLocation(context: Context) {
@@ -443,7 +479,6 @@ class MapActivity : AppCompatActivity(), HasAndroidInjector, OnMapReadyCallback,
             deliveryLocation = location
             latitude = location!!.latitude
             longitude = location.longitude
-            getMyLocation()
             viewModel.intents.trySend(MainIntent.GetPlaceId(viewModel.state.value!!.copy(
                 cliendLatitude = location!!.latitude!!,
                 cliendLongitude = location.longitude,
@@ -472,7 +507,7 @@ class MapActivity : AppCompatActivity(), HasAndroidInjector, OnMapReadyCallback,
         lifecycleScope.launchWhenStarted {
             viewModel.state.collect {
                 if (it != null) {
-                    if (it.PlaceId_2 != null && it.PlaceId_3 != null) {
+                    if (it.PlaceId_2 != null || it.PlaceId_3 != null) {
                         Pref.placeId_3 = it.PlaceId_3
                         Pref.placeId_2 = it.PlaceId_2
                         Log.d("TAG", "PlaceId_3:///:" + PlaceId_3 + "///" + PlaceId_2)
