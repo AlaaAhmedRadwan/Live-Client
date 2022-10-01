@@ -15,23 +15,25 @@ import dagger.android.ContributesAndroidInjector
 @Module
 interface ActivityBuildersModule {
 
+
     @ActivityScope
     @ContributesAndroidInjector(modules = [MainModule::class, FragmentFactoryModule::class])
     fun contributeMainActivity(): MainActivity
 
-  @ActivityScope
+
+    @ActivityScope
     @ContributesAndroidInjector(modules = [MainModule::class, FragmentFactoryModule::class])
     fun contributeMapActivity(): MapActivity
 
-  @ActivityScope
+
+    @ActivityScope
     @ContributesAndroidInjector(modules = [MainModule::class, FragmentFactoryModule::class])
     fun contributeLoginActivity(): LoginActivity
 
-  @ActivityScope
+
+    @ActivityScope
     @ContributesAndroidInjector(modules = [MainModule::class, FragmentFactoryModule::class])
     fun contributeSplashScreen(): SplashScreen
-
-
 
 
 }
