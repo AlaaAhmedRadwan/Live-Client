@@ -19,9 +19,6 @@ interface ActivityBuildersModule {
     @ContributesAndroidInjector(modules = [MainModule::class, FragmentFactoryModule::class])
     fun contributeMainActivity(): MainActivity
 
-
-
-
   @ActivityScope
     @ContributesAndroidInjector(modules = [MainModule::class, FragmentFactoryModule::class])
     fun contributeMapActivity(): MapActivity

@@ -480,10 +480,9 @@ fun CheckForPermessionEnabled(){
             latitude = location!!.latitude
             longitude = location.longitude
             viewModel.intents.trySend(MainIntent.GetPlaceId(viewModel.state.value!!.copy(
-                cliendLatitude = location!!.latitude!!,
+                cliendLatitude = location.latitude,
                 cliendLongitude = location.longitude,
                 progress = true)))
-
 
             map!!.animateCamera(
                 CameraUpdateFactory.newLatLngZoom(
@@ -518,24 +517,7 @@ fun CheckForPermessionEnabled(){
 
         }
     }
-    fun setUserLocationMarker(location: Location) {
-        homeLatLng = LatLng(location.latitude, location.longitude)
-        if (userLocationMarker == null) {
-            userLocationMarker = map!!.addMarker(MarkerOptions()
-                .position(homeLatLng)
-                .icon(BitmapDescriptorFactory
-                    .fromResource(R.drawable.motor_ic))
-                .rotation(location.bearing)
-                .anchor(0.5f, 0.5f)
-            )
 
-        } else {
-            userLocationMarker!!.position = homeLatLng
-            userLocationMarker!!.rotation = location.bearing
-
-
-        }
-    }
     fun getClientAddress(location: Coordinates,locationn: Location) {
 
         try {
@@ -778,7 +760,6 @@ fun CheckForPermessionEnabled(){
     }
 
     private fun connectToSocket() {
-
         mSocket?.connect()
         mSocket?.emit("create_user", Pref.VendorId)
 

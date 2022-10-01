@@ -1,10 +1,13 @@
 package com.codesroots.live.presentation.deliveries_fragment
 
+
 import android.app.Dialog
 import android.content.Context
 import android.os.Handler
 import android.os.Looper
+import android.text.Html
 import android.util.Log
+import android.view.ContextThemeWrapper
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.view.Window
@@ -20,7 +23,6 @@ import com.codesroots.live.helper.FormValidationLogin
 import com.codesroots.live.helper.SUCCESS_MotionToast
 import com.codesroots.live.models.auth.AuthModel
 import com.codesroots.live.models.auth.Driver
-import com.codesroots.live.models.current_orders.OrdersItem
 import com.codesroots.live.models.current_orders.SetorderToDelivery
 import com.codesroots.live.models.delivery.DeliveryItem
 import com.codesroots.live.models.ordermodel.OrderModel
@@ -71,8 +73,10 @@ class DeliveriesAdapter(
                     frag.viewModel.OrderInfoLD!!.observe(frag.requireActivity(), Observer {model->
                         if (model!=null)
                             p0.binding.progress.isVisible = false
+
                         orderData =  model
-                        dialog()
+
+                        dialog(model.delivery_serivce!!)
 
                     })
                 } catch (e: Exception) {}
@@ -126,13 +130,15 @@ class DeliveriesAdapter(
         frag.view.progress.isVisible = true
 
     }
-    private fun dialog(){
+    private fun dialog(delivery_service : Int ){
+
         (context as MapActivity).mSocket?.emit("CreateDeliveryRoom",
             data[index].room_id!!)
         val pDialog = Dialog(context)
         pDialog.getWindow()?.requestFeature(Window.FEATURE_ACTION_BAR);
         pDialog.setContentView(context.layoutInflater.inflate(R.layout.alert_dialog, null)
         );
+        pDialog.delivery_service_value.text = delivery_service.toString()
         pDialog.done.setOnClickListener {
             sendSocket()
             pDialog.hide()
@@ -143,11 +149,11 @@ class DeliveriesAdapter(
         }
         pDialog.show();
     }
-
     private  fun addOrder(p0: CustomViewHolders){
-        val orderModel = OrderModel(branch_id = frag.pref.VendorId,
+        val orderModel = OrderModel(
+            branch_id = frag.pref.VendorId,
             total = p0.binding.total.text.toString().toDouble(),
-           )
+        )
 
         frag.viewModel.addOrder(orderModel)
     }

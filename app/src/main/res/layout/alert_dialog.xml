@@ -4,14 +4,13 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-         android:padding="@dimen/dimen_8"
         android:background="@drawable/corner_raduis">
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/content"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_180sdp"
+        android:layout_height="match_parent"
         android:background="@drawable/corner_raduis"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -34,16 +33,41 @@
 
         <TextView
             android:id="@+id/content_text"
-            style="@style/sortStyle"
+            style="@style/LoginTextStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="24dp"
             android:text="@string/sendToDelivery"
             android:textAlignment="center"
             android:textColor="@color/black"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/header" />
+
+
+        <TextView
+            android:id="@+id/delivery_service"
+            style="@style/LoginTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginRight="@dimen/_8sdp"
+            android:text="@string/delivery_fee"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/content_text" />
+
+        <TextView
+            android:id="@+id/delivery_service_value"
+            style="@style/LoginTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/_12sdp"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            app:layout_constraintRight_toLeftOf="@+id/delivery_service"
+            app:layout_constraintTop_toTopOf="@+id/delivery_service" />
 
 
         <Button
@@ -53,12 +77,13 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
             android:backgroundTint="@color/white"
             android:text="@string/confirm"
             android:textColor="@color/orange"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@+id/cancel"
-            app:layout_constraintTop_toBottomOf="@+id/content_text" />
+            app:layout_constraintTop_toBottomOf="@+id/delivery_service" />
 
         <Button
             android:id="@+id/cancel"
@@ -72,7 +97,7 @@
             app:backgroundTint="@color/orange"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/content_text" />
+            app:layout_constraintTop_toTopOf="@+id/done" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

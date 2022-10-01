@@ -34,3 +34,4 @@ data class OrdersModelItem(
     var wallets: Any?=null,
     var wallets_id: Int?=null,
 )
+
