@@ -11,8 +11,6 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.DialogFragment
 
 import com.codesroots.live_venodr.R
-import com.codesroots.live_venodr.helper.BaseApplication
-import com.codesroots.live_venodr.helper.ClickHandler
 import com.codesroots.live_venodr.presentation.map_activity.MapActivity
 import javax.inject.Inject
 import android.view.Gravity
@@ -21,8 +19,7 @@ import androidx.core.view.isVisible
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModelProvider
 import com.codesroots.live_venodr.databinding.DeliveriesFragmentBinding
-import com.codesroots.live_venodr.helper.PreferenceHelper
-import com.codesroots.live_venodr.helper.WARN_MotionToast
+import com.codesroots.live_venodr.helper.*
 import com.codesroots.live_venodr.models.delivery.DeliveryItem
 import com.codesroots.live_venodr.presentation.current_order_fragment.mvi.CurrentOrderViewModel
 
@@ -52,6 +49,8 @@ if (pref.placeId_2 != null) {
         admivstrative_area_2 = pref.placeId_2,
         admivstrative_area_3 = pref.placeId_3,
     )
+
+    SUCCESS_MotionToast(pref.placeId_2.toString(),requireActivity())
 
     viewModel.getDeliveris(data)
 }

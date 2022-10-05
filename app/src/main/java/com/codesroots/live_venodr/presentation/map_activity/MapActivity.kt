@@ -500,14 +500,23 @@ class MapActivity : AppCompatActivity(), HasAndroidInjector, OnMapReadyCallback,
         lifecycleScope.launchWhenStarted {
             viewModel.state.collect {
                 if (it != null) {
-                    if (it.PlaceId_2 != null || it.PlaceId_3 != null) {
+                    if (it.PlaceId_2 != null){
+                      Pref.placeId_2 = it.PlaceId_2
+
+                    }else if (it.PlaceId_3 != null) {
                         Pref.placeId_3 = it.PlaceId_3
-                        Pref.placeId_2 = it.PlaceId_2
+                    }
+                    else
+
+
                         Log.d("TAG", "PlaceId_3:///:" + PlaceId_3 + "///" + PlaceId_2)
+
+                        SUCCESS_MotionToast("place "+ it.PlaceId_2.toString(),this@MapActivity)
+
                     }
                 }
 
-            }
+
 
         }
     }
