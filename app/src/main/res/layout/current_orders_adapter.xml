@@ -7,23 +7,23 @@
 
         <variable
             name="data"
-            type="com.codesroots.live.models.current_orders.OrdersItem" />
+            type="com.codesroots.live_venodr.models.current_orders.OrdersItem" />
 
         <variable
             name="Context"
-            type="com.codesroots.live.presentation.map_activity.MapActivity" />
+            type="com.codesroots.live_venodr.presentation.map_activity.MapActivity" />
 
         <variable
             name="fragment"
-            type="com.codesroots.live.presentation.current_item.CurrentItemFragment" />
+            type="com.codesroots.live_venodr.presentation.current_item.CurrentItemFragment" />
 
         <variable
             name="mainFragment"
-            type="com.codesroots.live.presentation.current_order_fragment.CurrentOrderFragment" />
+            type="com.codesroots.live_venodr.presentation.current_order_fragment.CurrentOrderFragment" />
 
         <variable
             name="listener"
-            type="com.codesroots.live.helper.ClickHandler" />
+            type="com.codesroots.live_venodr.helper.ClickHandler" />
 
         <variable
             name="status"

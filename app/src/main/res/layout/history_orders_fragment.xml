@@ -10,7 +10,7 @@
 
         <variable
             name="Context"
-            type="com.codesroots.live.presentation.map_activity.MapActivity" />
+            type="com.codesroots.live_venodr.presentation.map_activity.MapActivity" />
         <!--    <variable-->
         <!--        name="listener"-->
         <!--        type="com.example.satafood.presentaion.ClickHandler"/>-->

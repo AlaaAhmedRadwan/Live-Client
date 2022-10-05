@@ -5,14 +5,14 @@
     <data>
         <variable
             name="data"
-            type="com.codesroots.live.models.delivery.DeliveryItem" />
+            type="com.codesroots.live_venodr.models.delivery.DeliveryItem" />
 
         <variable
             name="Context"
-            type="com.codesroots.live.presentation.map_activity.MapActivity" />
+            type="com.codesroots.live_venodr.presentation.map_activity.MapActivity" />
         <variable
             name="listener"
-            type="com.codesroots.live.helper.ClickHandler"/>
+            type="com.codesroots.live_venodr.helper.ClickHandler"/>
 
     </data>
     <androidx.constraintlayout.widget.ConstraintLayout
